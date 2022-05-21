@@ -20,7 +20,7 @@ const Search = () => {
     return(
         <form onSubmit={searchFormHandler}>
             <TextField id="standard-basic" label="Search" variant="standard" value={userSearch} onChange={searchHandler}/>
-            <Button type="submit">Search</Button>
+            <Button type="submit" variant="contained">Search</Button>
         </form>
     )
 }
