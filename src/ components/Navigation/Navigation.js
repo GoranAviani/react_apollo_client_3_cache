@@ -5,11 +5,11 @@ import Search from "../Search/Search";
 
 import './Navigation.css'
 
-const Navigation = () =>{
+const Navigation = ({searchCityAPI}) =>{
 
     return(
         <div className="navigation">
-            <Search/>
+            <Search searchCityAPI={searchCityAPI}/>
             <LoginRegister />
         </div>
     )
