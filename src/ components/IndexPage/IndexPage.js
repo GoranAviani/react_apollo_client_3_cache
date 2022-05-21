@@ -7,9 +7,16 @@ import Footer from "../Footer/Footer";
 import './IndexPage.css'
 
 const IndexPage = () => {
+
+    const searchCityAPI = (userInput) => {
+        console.log("index")
+        console.log(userInput)
+    }
+
+
     return(
         <div className="indexPage">
-            <Navigation/>
+            <Navigation searchCityAPI={searchCityAPI}/>
             <DefaultCities/>
             <Footer/>
         </div>
