@@ -1,6 +1,6 @@
-.searchedCity{
+.searchedCity {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     height: 77vh;
-        border: 2px solid black;
+    border: 2px solid black;
 }
