@@ -1,7 +1,6 @@
 import React from 'react';
 
-import Navigation from './ components/Navigation/Navigation'
-import DefaultCities from "./ components/DefaultCities/DefaultCities";
+import IndexPage from "./ components/IndexPage/IndexPage";
 
 import './App.css';
 
@@ -9,8 +8,7 @@ import './App.css';
 function App() {
     return (
         <React.Fragment>
-            <Navigation/>
-            <DefaultCities/>
+            <IndexPage/>
         </React.Fragment>
 
     );
