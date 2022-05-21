@@ -1,5 +1,6 @@
 import React from "react";
 
+import './SearchedCity.css'
 
 const SearchedCity = ({searchedCityDetails}) => {
     return (
