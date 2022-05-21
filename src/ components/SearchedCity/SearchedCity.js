@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const SearchedCity = (searchedCityInfo) => {
+const SearchedCity = () => {
     return (
         <div className="searchedCity">
 
@@ -9,8 +9,8 @@ const SearchedCity = (searchedCityInfo) => {
                 <div className="currentTemperatureTitle">Temperature</div>
                 <div className="currentTemperatureNumber">current temp</div>
             </div>
-            <div className="cityName">
-                {searchedCityInfo}
+            <div className="citsearchedCityInfoName">
+city name
             </div>
             <div>
                 <div className="currentWeatherIcon">weather Icon</div>
