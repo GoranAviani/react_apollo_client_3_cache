@@ -1,9 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
+
+import {TextField} from "@mui/material";
 
 const Search = () => {
+    const [userSearch, setUserSearch] = useState("")
+
+
+
     return(
         <div>
-            search
+            <TextField id="standard-basic" label="Search" variant="standard" onChange={searchHandler}/>
         </div>
     )
 }
