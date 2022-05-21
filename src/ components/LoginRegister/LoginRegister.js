@@ -1,17 +1,18 @@
 import React from "react";
 import {Button} from "@mui/material";
 
+import './LoginRegister.css'
 
 const LoginRegister = () => {
 
     return(
-        <div>
-            <Button variant="outlined">
+        <div class="loginregister">
+            <button variant="outlined">
                 Login
-            </Button>
-            <Button variant="outlined">
+            </button>
+            <button variant="outlined">
                 Register
-            </Button>
+            </button>
         </div>
     )
 }
