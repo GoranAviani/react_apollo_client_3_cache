@@ -4,13 +4,15 @@ import Navigation from "../Navigation/Navigation";
 import DefaultCities from "../DefaultCities/DefaultCities";
 import Footer from "../Footer/Footer";
 
+import './IndexPage.css'
+
 const IndexPage = () => {
     return(
-        <React.Fragment>
+        <div className="indexPage">
             <Navigation/>
             <DefaultCities/>
             <Footer/>
-        </React.Fragment>
+        </div>
     )
 }
 
