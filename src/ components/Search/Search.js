@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-import {TextField} from "@mui/material";
+import {Button, TextField} from "@mui/material";
 
 const Search = () => {
     const [userSearch, setUserSearch] = useState("")
@@ -20,6 +20,7 @@ const Search = () => {
     return(
         <form onSubmit={searchFormHandler}>
             <TextField id="standard-basic" label="Search" variant="standard" value={userSearch} onChange={searchHandler}/>
+            <Button type="submit">Search</Button>
         </form>
     )
 }
