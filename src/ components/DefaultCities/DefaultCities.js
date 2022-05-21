@@ -9,9 +9,9 @@ const DefaultCities = () => {
     return (
         <div className="defaultCities">
             <div className="defaultCity">
-                <div className="defaultCityName">Split</div>
+                <div className="defaultCityName">city</div>
                 <div className="defualtCityIcon">
-                    Ikona
+                    icon
                 </div>
                 <div className="defaultCityTemperature">
                     18C
@@ -22,7 +22,25 @@ const DefaultCities = () => {
 
 
             <div className="defaultCity">
-                <div className="defaultCityName">Split</div>
+                <div className="defaultCityName">City name</div>
+                <div className="defualtCityIcon">
+                    Icon
+                </div>
+                <div className="defaultCityTemperature">
+                    18C
+                </div>
+                <Button>Open</Button>
+            </div><div className="defaultCity">
+                <div className="defaultCityName">city</div>
+                <div className="defualtCityIcon">
+                    icon
+                </div>
+                <div className="defaultCityTemperature">
+                    18C
+                </div>
+                <Button>Open</Button>
+            </div><div className="defaultCity">
+                <div className="defaultCityName">city</div>
                 <div className="defualtCityIcon">
                     Ikona
                 </div>
@@ -31,27 +49,9 @@ const DefaultCities = () => {
                 </div>
                 <Button>Open</Button>
             </div><div className="defaultCity">
-                <div className="defaultCityName">Split</div>
+                <div className="defaultCityName">city</div>
                 <div className="defualtCityIcon">
-                    Ikona
-                </div>
-                <div className="defaultCityTemperature">
-                    18C
-                </div>
-                <Button>Open</Button>
-            </div><div className="defaultCity">
-                <div className="defaultCityName">Split</div>
-                <div className="defualtCityIcon">
-                    Ikona
-                </div>
-                <div className="defaultCityTemperature">
-                    18C
-                </div>
-                <Button>Open</Button>
-            </div><div className="defaultCity">
-                <div className="defaultCityName">Split</div>
-                <div className="defualtCityIcon">
-                    Ikona
+                    icon
                 </div>
                 <div className="defaultCityTemperature">
                     18C
