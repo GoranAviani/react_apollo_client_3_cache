@@ -8,7 +8,7 @@ import './Navigation.css'
 const Navigation = () =>{
 
     return(
-        <div class="Navigation">
+        <div className="navigation">
             <Search/>
             <LoginRegister />
         </div>
