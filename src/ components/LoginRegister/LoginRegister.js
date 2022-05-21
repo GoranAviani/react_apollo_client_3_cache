@@ -7,12 +7,12 @@ const LoginRegister = () => {
 
     return(
         <div className="loginregister">
-            <button variant="outlined">
+            <Button variant="outlined">
                 Login
-            </button>
-            <button variant="outlined">
+            </Button>
+            <Button variant="outlined">
                 Register
-            </button>
+            </Button>
         </div>
     )
 }
