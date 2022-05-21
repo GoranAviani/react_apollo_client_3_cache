@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const SearchedCity = () => {
+const SearchedCity = (searchedCityInfo) => {
     return (
         <div className="searchedCity">
 
@@ -10,7 +10,7 @@ const SearchedCity = () => {
                 <div className="currentTemperatureNumber">current temp</div>
             </div>
             <div className="cityName">
-                Split
+                {searchedCityInfo}
             </div>
             <div>
                 <div className="currentWeatherIcon">weather Icon</div>
