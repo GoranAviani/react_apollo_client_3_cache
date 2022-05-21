@@ -1,6 +1,7 @@
 import React from 'react';
 
-import {Button} from "@mui/material";
+import LoginRegister from "../LoginRegister/LoginRegister";
+import Search from "../Search/Search";
 
 import './Navigation.css'
 
@@ -8,12 +9,8 @@ const Navigation = () =>{
 
     return(
         <div class="Navigation">
-            <Button variant="outlined">
-                Login
-            </Button>
-            <Button variant="outlined">
-                Register
-            </Button>
+            <Search/>
+            <LoginRegister />
         </div>
     )
 }
