@@ -21,7 +21,7 @@ const IndexPage = () => {
 
         <div className="indexPage">
             <Navigation searchCityAPI={searchCityAPI}/>
-            (showSearchResult ? <SearchedCity searchedCityInfo = {searchedCityInfo}/> :<DefaultCities/>)
+            {showSearchResult ?  <SearchedCity/> : <DefaultCities/>}
             <Footer/>
         </div>
     )
