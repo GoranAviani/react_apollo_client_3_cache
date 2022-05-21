@@ -32,3 +32,5 @@ const SearchedCity = () => {
         </div>
     )
 }
+
+export default SearchedCity;
