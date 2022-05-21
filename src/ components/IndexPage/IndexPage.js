@@ -13,6 +13,7 @@ const IndexPage = () => {
     const searchCityAPI = (userInput) => {
         console.log("index")
         console.log(userInput)
+        setSearchedCityInfo(userInput)
         setShowSearchResult(true)
     }
 
@@ -21,7 +22,7 @@ const IndexPage = () => {
 
         <div className="indexPage">
             <Navigation searchCityAPI={searchCityAPI}/>
-            {showSearchResult ?  <SearchedCity/> : <DefaultCities/>}
+            {showSearchResult ?  <SearchedCity searchedCityDetails={searchedCityInfo}/> : <DefaultCities/>}
             <Footer/>
         </div>
     )
