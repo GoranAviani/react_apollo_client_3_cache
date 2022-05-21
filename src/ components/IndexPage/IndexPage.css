@@ -1,0 +1,8 @@
+.indexPage{
+    display: grid;
+    background: aqua;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 2vh;
+    padding: 5vh 5vh 5vh 5vh;
+    height: calc(100vh - 10vh);
+}

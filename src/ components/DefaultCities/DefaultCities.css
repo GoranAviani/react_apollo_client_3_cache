@@ -1,0 +1,8 @@
+.defaultCities{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-flow: row;
+    height: 77vh;
+        border: 2px solid red;
+
+}

@@ -1,16 +1,16 @@
 import React from 'react';
-import './App.css';
-import Navigation from './ components/Navigation/Navigation'
-import DefaultCities from "./ components/DefaultCities/DefaultCities";
+
+import IndexPage from "./ components/IndexPage/IndexPage";
+
+
 
 function App() {
-  return (
-      <React.Fragment>
-        <Navigation/>
-        <DefaultCities/>
-      </React.Fragment>
+    return (
+        <React.Fragment>
+            <IndexPage/>
+        </React.Fragment>
 
-  );
+    );
 }
 
 export default App;
