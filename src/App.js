@@ -2,7 +2,6 @@ import React from 'react';
 
 import IndexPage from "./ components/IndexPage/IndexPage";
 
-import './App.css';
 
 
 function App() {
