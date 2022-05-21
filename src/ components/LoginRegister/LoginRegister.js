@@ -6,7 +6,7 @@ import './LoginRegister.css'
 const LoginRegister = () => {
 
     return(
-        <div class="loginregister">
+        <div className="loginregister">
             <button variant="outlined">
                 Login
             </button>

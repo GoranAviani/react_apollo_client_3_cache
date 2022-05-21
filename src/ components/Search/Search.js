@@ -11,10 +11,16 @@ const Search = () => {
 
     }
 
+    const searchFormHandler = (e) => {
+        e.preventDefault()
+        console.log("form")
+        console.log(userSearch)
+    }
+
     return(
-        <div>
+        <form onSubmit={searchFormHandler}>
             <TextField id="standard-basic" label="Search" variant="standard" value={userSearch} onChange={searchHandler}/>
-        </div>
+        </form>
     )
 }
 
