@@ -2,6 +2,8 @@ import React, {useState} from "react";
 
 import {Button, TextField} from "@mui/material";
 
+import './Search.css'
+
 const Search = () => {
     const [userSearch, setUserSearch] = useState("")
 
@@ -18,7 +20,7 @@ const Search = () => {
     }
 
     return(
-        <form onSubmit={searchFormHandler}>
+        <form onSubmit={searchFormHandler} className="search">
             <TextField id="standard-basic" label="Search" variant="standard" value={userSearch} onChange={searchHandler}/>
             <Button type="submit" variant="contained">Search</Button>
         </form>
