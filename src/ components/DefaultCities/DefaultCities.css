@@ -3,6 +3,6 @@
     grid-template-columns: repeat(4, 1fr);
     grid-auto-flow: row;
     height: 72vh;
-        border: 2px solid red;
+    border: 2px solid red;
 
 }
