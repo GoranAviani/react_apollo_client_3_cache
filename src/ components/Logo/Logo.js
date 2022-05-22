@@ -1,10 +1,9 @@
 import React from "react";
 
-import './Logo.css'
 import {Link} from "react-router-dom";
 
-import IndexPage from "../IndexPage/IndexPage";
-import Dashboard from "../Dashboard/Dashboard";
+import './Logo.css'
+
 
 const Logo = ({goHome}) => {
     return (
