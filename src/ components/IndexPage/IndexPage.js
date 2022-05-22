@@ -8,6 +8,7 @@ import Logo from "../Logo/Logo";
 
 import './IndexPage.css'
 
+
 const IndexPage = () => {
     const [showSearchResult, setShowSearchResult] = useState(false)
     const [searchedCityInfo, setSearchedCityInfo] = useState("searchedCityInfo info")
@@ -27,6 +28,7 @@ const IndexPage = () => {
             {showSearchResult ?  <SearchedCity searchedCityDetails={searchedCityInfo}/> : <DefaultCities/>}
             <Footer/>
         </div>
+
     )
 }
 
