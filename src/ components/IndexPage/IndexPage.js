@@ -16,7 +16,7 @@ const IndexPage = () => {
     const [searchedCityInfo, setSearchedCityInfo] = useState("searchedCityInfo info")
 
 
-    const goHome = ()=> {
+    const goHome = () => {
         setShowSearchResult(false)
     }
 
@@ -28,12 +28,12 @@ const IndexPage = () => {
     }
 
 
-    return(
+    return (
 
         <div className="indexPage">
             <Logo goHome={goHome}/>
             <Navigation searchCityAPI={searchCityAPI}/>
-            {showSearchResult ?  <SearchedCity searchedCityDetails={searchedCityInfo}/> : <DefaultCities/>}
+            {showSearchResult ? <SearchedCity searchedCityDetails={searchedCityInfo}/> : <DefaultCities/>}
             <Footer/>
         </div>
 
