@@ -21,9 +21,10 @@ const Search = ({searchCityAPI}) => {
         // call index page api fun that will render searchedcity.js
     }
 
-    return(
+    return (
         <form onSubmit={searchFormHandler} className="search">
-            <TextField id="standard-basic" label="Search" variant="standard" value={userSearch} onChange={searchHandler}/>
+            <TextField id="standard-basic" label="Search" variant="standard" value={userSearch}
+                       onChange={searchHandler}/>
             <Button type="submit" variant="contained">Search</Button>
         </form>
     )
