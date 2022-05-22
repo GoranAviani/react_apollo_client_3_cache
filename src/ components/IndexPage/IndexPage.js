@@ -10,8 +10,16 @@ import './IndexPage.css'
 
 
 const IndexPage = () => {
+
+
     const [showSearchResult, setShowSearchResult] = useState(false)
     const [searchedCityInfo, setSearchedCityInfo] = useState("searchedCityInfo info")
+
+
+    const goHome = ()=> {
+        setShowSearchResult(false)
+    }
+
     const searchCityAPI = (userInput) => {
         console.log("index")
         console.log(userInput)
@@ -23,7 +31,7 @@ const IndexPage = () => {
     return(
 
         <div className="indexPage">
-            <Logo/>
+            <Logo goHome={goHome}/>
             <Navigation searchCityAPI={searchCityAPI}/>
             {showSearchResult ?  <SearchedCity searchedCityDetails={searchedCityInfo}/> : <DefaultCities/>}
             <Footer/>
