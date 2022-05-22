@@ -5,7 +5,6 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import IndexPage from "./ components/IndexPage/IndexPage";
 import Dashboard from "./ components/Dashboard/Dashboard";
@@ -15,9 +14,9 @@ root.render(
     <React.StrictMode>
         <BrowserRouter>
             <Routes>
-            <Route path="/" element={<IndexPage />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-        </Routes>
+                <Route path="/" element={<IndexPage/>}/>
+                <Route path="/dashboard" element={<Dashboard/>}/>
+            </Routes>
         </BrowserRouter>
     </React.StrictMode>
 );
