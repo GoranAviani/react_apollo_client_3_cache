@@ -1,5 +1,5 @@
 
-export const searchCityAPI = (userInput) => {
+export const useSearchCityAPI = (userInput) => {
 
     /* get city weather via api */
 
