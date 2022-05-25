@@ -23,6 +23,7 @@ const IndexPage = () => {
     }
 
     const searchCityAPIHandler = (userInput) => {
+        /* check input */
         const cityWeatherDetails = useSearchCityAPI(userInput)
         console.log("index")
         console.log(userInput)
