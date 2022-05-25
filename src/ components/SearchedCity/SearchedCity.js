@@ -11,7 +11,7 @@ const SearchedCity = ({searchedCityDetails}) => {
 
                 <div className="currentTemperature">
                     <div className="currentTemperatureTitle">Temperature</div>
-                    <div className="currentTemperatureNumber">current temp {searchedCityDetails.toString()}</div>
+                    <div className="currentTemperatureNumber">current temp {searchedCityDetails.status.toString()}</div>
                 </div>
                 <div className="citsearchedCityInfoName">
                     city name
@@ -33,7 +33,7 @@ const SearchedCity = ({searchedCityDetails}) => {
                 <div>
 
 <div className="weatherDescriptionTitle">Weather description</div>
-                    <div className="weatherDescriptionText">aa</div>
+                    <div className="weatherDescriptionText">{searchedCityDetails.weatherNow.toString()}</div>
 
 
                 </div>
