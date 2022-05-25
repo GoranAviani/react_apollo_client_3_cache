@@ -31,7 +31,11 @@ const SearchedCity = ({searchedCityDetails}) => {
                 </div>
 
                 <div>
-                    current weather desctiption
+
+<div className="highestTemperatureTitle">Weather description</div>
+                    <div className="highestTemperatureNumber">highest temp</div>
+
+
                 </div>
             </div>
         </div>
