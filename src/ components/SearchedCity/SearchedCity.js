@@ -32,8 +32,8 @@ const SearchedCity = ({searchedCityDetails}) => {
 
                 <div>
 
-<div className="highestTemperatureTitle">Weather description</div>
-                    <div className="highestTemperatureNumber">highest temp</div>
+<div className="weatherDescriptionTitle">Weather description</div>
+                    <div className="WeatherDescriptionText">highest temp</div>
 
 
                 </div>
