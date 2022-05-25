@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 
+import {useSearchCityAPI} from "../../hooks/useSearchCityAPI";
+
 import Navigation from "../Navigation/Navigation";
 import DefaultCities from "../DefaultCities/DefaultCities";
 import Footer from "../Footer/Footer";
@@ -20,10 +22,11 @@ const IndexPage = () => {
         setShowSearchResult(false)
     }
 
-    const searchCityAPI = (userInput) => {
+    const searchCityAPIHandler = (userInput) => {
+        const cityWeatherDetails = useSearchCityAPI(userInput)
         console.log("index")
         console.log(userInput)
-        setSearchedCityInfo(userInput)
+        setSearchedCityDetails(cityWeatherDetails)
         setShowSearchResult(true)
     }
 
@@ -33,7 +36,7 @@ const IndexPage = () => {
         <div className="indexPage">
             <Logo goHome={goHome}/>
             <Navigation searchCityAPI={searchCityAPI}/>
-            {showSearchResult ? <SearchedCity searchedCityDetails={searchedCityInfo}/> : <DefaultCities/>}
+            {showSearchResult ? <SearchedCity searchedCityDetails={SearchedCityDetails}/> : <DefaultCities/>}
             <Footer/>
         </div>
 
