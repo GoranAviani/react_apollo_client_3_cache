@@ -4,7 +4,7 @@ import {Button, TextField} from "@mui/material";
 
 import './Search.css'
 
-const Search = ({searchCityAPI}) => {
+const Search = ({searchCityAPIHandler}) => {
     const [userSearch, setUserSearch] = useState("")
 
     const searchHandler = (e) => {
@@ -15,10 +15,7 @@ const Search = ({searchCityAPI}) => {
 
     const searchFormHandler = (e) => {
         e.preventDefault()
-        console.log("form")
-        console.log(userSearch)
-        searchCityAPI(userSearch)
-        // call index page api fun that will render searchedcity.js
+        searchCityAPIHandler(userSearch)
     }
 
     return (
