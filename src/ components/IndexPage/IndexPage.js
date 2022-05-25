@@ -27,7 +27,11 @@ const IndexPage = () => {
         const weatherApiResult = useSearchCityAPI(userInput)
         console.log("index")
         console.log(userInput)
-        setSearchedCityDetails(weatherApiResult)
+        console.log(weatherApiResult)
+        console.log(searchedCityDetails)
+        setSearchedCityDetails({...searchedCityDetails, weatherApiResult})
+                console.log(searchedCityDetails)
+
         setShowSearchResult(searchedCityDetails.showResults)
     }
 
