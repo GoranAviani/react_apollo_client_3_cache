@@ -33,7 +33,7 @@ const SearchedCity = ({searchedCityDetails}) => {
                 <div>
 
 <div className="weatherDescriptionTitle">Weather description</div>
-                    <div className="weatherDescriptionText">{searchedCityDetails.weatherNow.toString()}</div>
+                    <div className="weatherDescriptionText">{searchedCityDetails.weatherNow}</div>
 
 
                 </div>
