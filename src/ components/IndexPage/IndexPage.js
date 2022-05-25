@@ -36,7 +36,7 @@ const IndexPage = () => {
 
         <div className="indexPage">
             <Logo goHome={goHome}/>
-            <Navigation searchCityAPI={searchCityAPI}/>
+            <Navigation searchCityAPIHandler={searchCityAPIHandler}/>
             {showSearchResult ? <SearchedCity searchedCityDetails={searchedCityDetails}/> : <DefaultCities/>}
             <Footer/>
         </div>
