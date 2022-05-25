@@ -15,7 +15,7 @@ const IndexPage = () => {
 
 
     const [showSearchResult, setShowSearchResult] = useState(false)
-    const [searchedCityDetails, setSearchedCityDetails] = useState("searchedCityInfo info")
+    const [searchedCityDetails, setSearchedCityDetails] = useState()
 
 
     const goHome = () => {
