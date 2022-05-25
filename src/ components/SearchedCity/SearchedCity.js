@@ -32,7 +32,8 @@ const SearchedCity = ({searchedCityDetails}) => {
 
                 <div>
 
-<div className="weatherDescriptionTitle">Weather description</div>
+
+                    <div className="weatherDescriptionTitle">Weather description</div>
                     <div className="weatherDescriptionText">{searchedCityDetails.weatherNow}</div>
 
 
