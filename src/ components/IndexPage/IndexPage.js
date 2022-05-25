@@ -15,7 +15,7 @@ const IndexPage = () => {
 
 
     const [showSearchResult, setShowSearchResult] = useState(false)
-    const [searchedCityInfo, setSearchedCityInfo] = useState("searchedCityInfo info")
+    const [searchedCityDetails, setSearchedCityDetails] = useState("searchedCityInfo info")
 
 
     const goHome = () => {
@@ -28,7 +28,7 @@ const IndexPage = () => {
         console.log("index")
         console.log(userInput)
         setSearchedCityDetails(cityWeatherDetails)
-        setShowSearchResult(true)
+        setShowSearchResult(cityWeatherDetails.showResults)
     }
 
 
@@ -37,7 +37,7 @@ const IndexPage = () => {
         <div className="indexPage">
             <Logo goHome={goHome}/>
             <Navigation searchCityAPI={searchCityAPI}/>
-            {showSearchResult ? <SearchedCity searchedCityDetails={SearchedCityDetails}/> : <DefaultCities/>}
+            {showSearchResult ? <SearchedCity searchedCityDetails={searchedCityDetails}/> : <DefaultCities/>}
             <Footer/>
         </div>
 
