@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 
 import {useSearchCityAPI} from "../../hooks/useSearchCityAPI";
 
@@ -13,9 +13,8 @@ import './IndexPage.css'
 
 const IndexPage = () => {
 
-
     const [showSearchResult, setShowSearchResult] = useState(false)
-    const [searchedCityDetails, setSearchedCityDetails] = useState({})
+    const [searchedCityDetails, setSearchedCityDetails] = useState({status:""})
 
 
     const goHome = () => {
@@ -28,12 +27,11 @@ const IndexPage = () => {
         console.log("index")
         console.log(userInput)
         console.log(weatherApiResult)
-        console.log(searchedCityDetails)
-        setSearchedCityDetails({...searchedCityDetails, weatherApiResult})
-                console.log(searchedCityDetails)
+        setShowSearchResult(true)
+        setSearchedCityDetails(weatherApiResult)
 
-        setShowSearchResult(searchedCityDetails.showResults)
     }
+
 
 
     return (
