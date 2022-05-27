@@ -1,21 +1,26 @@
 import React from "react";
 
+import './SearchedCity.css'
 
-const SearchedCity = () => {
+const SearchedCity = ({searchedCityDetails}) => {
+    console.log(searchedCityDetails)
+    /* unpack api result info */
     return (
         <div className="searchedCity">
+            <div className="searchedCityMainDetails">
 
-            <div className="currentTemperature">
-                <div className="currentTemperatureTitle">Temperature</div>
-                <div className="currentTemperatureNumber">current temp</div>
+                <div className="currentTemperature">
+                    <div className="currentTemperatureTitle">Temperature</div>
+                    <div className="currentTemperatureNumber">current temp {searchedCityDetails.status.toString()}</div>
+                </div>
+                <div className="citsearchedCityInfoName">
+                    city name
+                </div>
+                <div>
+                    <div className="currentWeatherIcon">weather Icon</div>
+                </div>
             </div>
-            <div className="cityName">
-                Split
-            </div>
-            <div>
-                <div className="currentWeatherIcon">weather Icon</div>
-            </div>
-            <div className="searchedCityDetails">
+            <div className="searchedCityOtherDetails">
                 <div>
                     <div className="lowestTemperatureTitle">Daily lowest</div>
                     <div className="lowestTemperatureNumber">lowest temp</div>
@@ -26,7 +31,12 @@ const SearchedCity = () => {
                 </div>
 
                 <div>
-                    current weather desctiption
+
+
+                    <div className="weatherDescriptionTitle">Weather description</div>
+                    <div className="weatherDescriptionText">{searchedCityDetails.weatherNow}</div>
+
+
                 </div>
             </div>
         </div>
