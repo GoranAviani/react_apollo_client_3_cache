@@ -8,6 +8,7 @@ export const useSearchCityAPI = async (cityName, setSearchedCityDetails, setIsLo
     const searchCityGet = async () => {
         axiosClient.get().then((response)=> { setSearchedCityDetails(response) })
         // await new Promise(resolve => setTimeout(resolve, 1000));
+
         setIsLoading(false)
     }
 
