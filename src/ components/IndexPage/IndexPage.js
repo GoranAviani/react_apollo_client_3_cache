@@ -30,7 +30,7 @@ const IndexPage = () => {
         console.log({weatherApiResult})
         setShowSearchResult(true)
         setSearchedCityDetails(weatherApiResult)
-                setIsLoading(true)
+        setIsLoading(true)
 
         console.log({isLoading})
 
@@ -44,7 +44,8 @@ const IndexPage = () => {
         <div className="indexPage">
             <Logo goHome={goHome}/>
             <Navigation searchCityAPIHandler={searchCityAPIHandler}/>
-            {searchedCityDetails ? <SearchedCity searchedCityDetails={searchedCityDetails}/> : <DefaultCities/>}
+            {isLoading ? "loading" : (searchedCityDetails ? <SearchedCity searchedCityDetails={searchedCityDetails}/> : <DefaultCities/>)}
+
             <Footer/>
         </div>
 
