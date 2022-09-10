@@ -3,6 +3,8 @@ import React from "react";
 import './SearchedCity.css'
 
 const SearchedCity = ({searchedCityDetails}) => {
+    console.log('SearchedCity')
+    console.log({searchedCityDetails})
     /* unpack api result info */
     return (
         <div className="searchedCity">
@@ -10,10 +12,10 @@ const SearchedCity = ({searchedCityDetails}) => {
 
                 <div className="currentTemperature">
                     <div className="currentTemperatureTitle">Temperature</div>
-                    <div className="currentTemperatureNumber">**** </div>
+                    <div className="currentTemperatureNumber">{searchedCityDetails.cityName} </div>
                 </div>
                 <div className="citsearchedCityInfoName">
-            {searchedCityDetails.cityName}
+                            {searchedCityDetails.cityName}
                 </div>
                 <div>
                     <div className="currentWeatherIcon">weather Icon</div>
@@ -22,7 +24,7 @@ const SearchedCity = ({searchedCityDetails}) => {
             <div className="searchedCityOtherDetails">
                 <div>
                     <div className="lowestTemperatureTitle">Daily lowest</div>
-                    <div className="lowestTemperatureNumber">****</div>
+                    <div className="lowestTemperatureNumber">{searchedCityDetails.cityName}</div>
                 </div>
                 <div>
                     <div className="highestTemperatureTitle">Daily highest</div>
