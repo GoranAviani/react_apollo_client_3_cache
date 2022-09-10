@@ -19,7 +19,7 @@ const IndexPage = () => {
 
 
     const goHome = () => {
-        setShowHomePage(false)
+        setShowHomePage(true)
     }
 
     const searchCityAPIHandler = async (cityName) => {
