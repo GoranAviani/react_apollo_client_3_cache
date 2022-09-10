@@ -6,7 +6,7 @@ export const useSearchCityAPI = (cityName) => {
     const axiosClient = createAxiosClient()
     /* get city weather via api */
     const searchCityGet = async () => {
-        return axiosClient.get().then((response)=> {return response})
+        return axiosClient.get().then((response)=> { console.log({response})})
     }
 
     return searchCityGet()
