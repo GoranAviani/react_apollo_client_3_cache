@@ -12,10 +12,10 @@ const SearchedCity = ({searchedCityDetails}) => {
 
                 <div className="currentTemperature">
                     <div className="currentTemperatureTitle">Temperature</div>
-                    <div className="currentTemperatureNumber">{searchedCityDetails.cityName} </div>
+                    <div className="currentTemperatureNumber">{searchedCityDetails.data.cityName} </div>
                 </div>
                 <div className="citsearchedCityInfoName">
-                            {searchedCityDetails.cityName}
+                            {searchedCityDetails.data.cityName}
                 </div>
                 <div>
                     <div className="currentWeatherIcon">weather Icon</div>
@@ -24,7 +24,7 @@ const SearchedCity = ({searchedCityDetails}) => {
             <div className="searchedCityOtherDetails">
                 <div>
                     <div className="lowestTemperatureTitle">Daily lowest</div>
-                    <div className="lowestTemperatureNumber">{searchedCityDetails.cityName}</div>
+                    <div className="lowestTemperatureNumber">{searchedCityDetailsdata.cityName}</div>
                 </div>
                 <div>
                     <div className="highestTemperatureTitle">Daily highest</div>
