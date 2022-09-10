@@ -14,7 +14,7 @@ import './IndexPage.css'
 const IndexPage = () => {
 
     const [showSearchResult, setShowSearchResult] = useState(false)
-    const [searchedCityDetails, setSearchedCityDetails] = useState()
+    const [searchedCityDetails, setSearchedCityDetails] = useState(false)
     const [isLoading, setIsLoading] = useState(false)
 
 
@@ -27,9 +27,9 @@ const IndexPage = () => {
         setIsLoading(true)
         console.log({isLoading})
         const weatherApiResult = useSearchCityAPI(cityName)
-        console.log({weatherApiResult})
-        setShowSearchResult(true)
         setSearchedCityDetails(weatherApiResult)
+        console.log({searchedCityDetails})
+
         setIsLoading(true)
 
         console.log({isLoading})
@@ -44,7 +44,7 @@ const IndexPage = () => {
         <div className="indexPage">
             <Logo goHome={goHome}/>
             <Navigation searchCityAPIHandler={searchCityAPIHandler}/>
-            {isLoading ? "loading" : (showSearchResult ? <SearchedCity searchedCityDetails={searchedCityDetails}/> : <DefaultCities/>)}
+            {searchedCityDetails ? <SearchedCity searchedCityDetails={searchedCityDetails}/> : <DefaultCities/>}
 
             <Footer/>
         </div>
