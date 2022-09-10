@@ -34,8 +34,8 @@ const IndexPage = () => {
             <Logo goHome={goHome}/>
             <Navigation searchCityAPIHandler={searchCityAPIHandler}/>
             {showHomePage && <DefaultCities/>}
-                {isLoading ? "loading" :
-                (searchedCityDetails && <SearchedCity searchedCityDetails={searchedCityDetails}/>)}
+            {isLoading ? "loading" :
+            (searchedCityDetails && <SearchedCity searchedCityDetails={searchedCityDetails}/>)}
             <Footer/>
         </div>
 
