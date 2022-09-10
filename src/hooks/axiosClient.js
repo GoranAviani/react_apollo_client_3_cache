@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-const createAxiosClient = () => {
+const createAxiosClient = async () => {
         return axios.create({baseURL: "https://weather.deta.dev"})
 
 }
