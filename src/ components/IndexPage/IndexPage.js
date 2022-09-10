@@ -39,7 +39,7 @@ const IndexPage = () => {
         <div className="indexPage">
             <Logo goHome={goHome}/>
             <Navigation searchCityAPIHandler={searchCityAPIHandler}/>
-            {showSearchResult ? <SearchedCity searchedCityDetails={searchedCityDetails}/> : <DefaultCities/>}
+            {searchedCityDetails ? <SearchedCity searchedCityDetails={searchedCityDetails}/> : <DefaultCities/>}
             <Footer/>
         </div>
 
