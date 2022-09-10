@@ -13,13 +13,13 @@ import './IndexPage.css'
 
 const IndexPage = () => {
 
-    const [showSearchResult, setShowSearchResult] = useState(false)
+    const [showHomePage, setShowHomePage] = useState(true)
     const [searchedCityDetails, setSearchedCityDetails] = useState(false)
     const [isLoading, setIsLoading] = useState(false)
 
 
     const goHome = () => {
-        setShowSearchResult(false)
+        setShowHomePage(false)
     }
 
     const searchCityAPIHandler = async (cityName) => {
@@ -35,7 +35,8 @@ const IndexPage = () => {
         <div className="indexPage">
             <Logo goHome={goHome}/>
             <Navigation searchCityAPIHandler={searchCityAPIHandler}/>
-            {isLoading ? "loading" : (searchedCityDetails ? <SearchedCity searchedCityDetails={searchedCityDetails}/> : <DefaultCities/>)}
+            {showHomePage ? <DefaultCities/> :
+            isLoading ? "loading" : (searchedCityDetails && <SearchedCity searchedCityDetails={searchedCityDetails}/>)}
             <Footer/>
         </div>
 
