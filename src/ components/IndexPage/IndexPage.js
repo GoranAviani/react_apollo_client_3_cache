@@ -25,7 +25,6 @@ const IndexPage = () => {
     const searchCityAPIHandler = async (cityName) => {
         /* check input */
         setShowHomePage(false)
-
         await useSearchCityAPI(cityName, setSearchedCityDetails, setIsLoading)
     }
 
@@ -36,8 +35,9 @@ const IndexPage = () => {
         <div className="indexPage">
             <Logo goHome={goHome}/>
             <Navigation searchCityAPIHandler={searchCityAPIHandler}/>
-            {showHomePage ? <DefaultCities/> :
-            isLoading ? "loading" : (searchedCityDetails && <SearchedCity searchedCityDetails={searchedCityDetails}/>)}
+            {showHomePage && <DefaultCities/>}
+                {isLoading && "loading" }
+                (searchedCityDetails && <SearchedCity searchedCityDetails={searchedCityDetails}/>)}
             <Footer/>
         </div>
 
