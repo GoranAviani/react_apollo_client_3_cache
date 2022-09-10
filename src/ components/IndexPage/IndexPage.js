@@ -27,8 +27,6 @@ const IndexPage = () => {
         setIsLoading(true)
         await useSearchCityAPI(cityName, setSearchedCityDetails, setIsLoading)
 
-
-
     }
 
 
