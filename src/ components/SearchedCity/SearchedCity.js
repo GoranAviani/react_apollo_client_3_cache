@@ -3,7 +3,7 @@ import React from "react";
 import './SearchedCity.css'
 
 const SearchedCity = ({searchedCityDetails}) => {
-    console.log(searchedCityDetails)
+    console.log({searchedCityDetails})
     /* unpack api result info */
     return (
         <div className="searchedCity">
@@ -11,10 +11,10 @@ const SearchedCity = ({searchedCityDetails}) => {
 
                 <div className="currentTemperature">
                     <div className="currentTemperatureTitle">Temperature</div>
-                    <div className="currentTemperatureNumber">current temp {searchedCityDetails.status.toString()}</div>
+                    <div className="currentTemperatureNumber">current temp </div>
                 </div>
                 <div className="citsearchedCityInfoName">
-                    city name
+            {searchedCityDetails.cityName}
                 </div>
                 <div>
                     <div className="currentWeatherIcon">weather Icon</div>
