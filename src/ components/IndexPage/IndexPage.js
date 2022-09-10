@@ -28,8 +28,6 @@ const IndexPage = () => {
         await useSearchCityAPI(cityName, setSearchedCityDetails, setIsLoading)
     }
 
-
-
     return (
 
         <div className="indexPage">
