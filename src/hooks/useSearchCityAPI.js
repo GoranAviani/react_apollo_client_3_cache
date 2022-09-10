@@ -7,10 +7,12 @@ export const useSearchCityAPI = async (cityName, setSearchedCityDetails, setIsLo
     /* get city weather via api */
     const searchCityGet = async () => {
         setIsLoading(true)
-        axiosClient.get().then((response)=> { setSearchedCityDetails(response) })
+        axiosClient.get().then((response)=> {
+            setSearchedCityDetails(response)
+            setIsLoading(false)
+        })
         //await new Promise(resolve => setTimeout(resolve, 1000));
 
-        setIsLoading(false)
     }
 
     searchCityGet()
