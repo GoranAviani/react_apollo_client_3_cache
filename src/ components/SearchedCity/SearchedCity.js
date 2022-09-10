@@ -9,7 +9,6 @@ const SearchedCity = ({searchedCityDetails}) => {
     return (
         <div className="searchedCity">
             <div className="searchedCityMainDetails">
-
                 <div className="currentTemperature">
                     <div className="currentTemperatureTitle">Temperature</div>
                     <div className="currentTemperatureNumber">{searchedCityDetails.data.cityName} </div>
