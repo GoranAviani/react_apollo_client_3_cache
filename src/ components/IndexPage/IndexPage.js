@@ -15,6 +15,7 @@ const IndexPage = () => {
 
     const [showSearchResult, setShowSearchResult] = useState(false)
     const [searchedCityDetails, setSearchedCityDetails] = useState()
+    const [isLoading, setIsLoading] = useState(false)
 
 
     const goHome = () => {
@@ -23,10 +24,16 @@ const IndexPage = () => {
 
     const searchCityAPIHandler = (cityName) => {
         /* check input */
+        setIsLoading(true)
+        console.log({isLoading})
         const weatherApiResult = useSearchCityAPI(cityName)
         console.log({weatherApiResult})
         setShowSearchResult(true)
         setSearchedCityDetails(weatherApiResult)
+                setIsLoading(true)
+
+        console.log({isLoading})
+
 
     }
 
