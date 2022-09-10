@@ -14,7 +14,7 @@ import './IndexPage.css'
 const IndexPage = () => {
 
     const [showSearchResult, setShowSearchResult] = useState(false)
-    const [searchedCityDetails, setSearchedCityDetails] = useState({status:""})
+    const [searchedCityDetails, setSearchedCityDetails] = useState()
 
 
     const goHome = () => {
@@ -25,7 +25,6 @@ const IndexPage = () => {
         /* check input */
         const weatherApiResult = useSearchCityAPI(cityName)
         console.log("index")
-        console.log(cityName)
         console.log({weatherApiResult})
         setShowSearchResult(true)
         setSearchedCityDetails(weatherApiResult)

@@ -3,7 +3,6 @@ import React from "react";
 import './SearchedCity.css'
 
 const SearchedCity = ({searchedCityDetails}) => {
-    console.log({searchedCityDetails})
     /* unpack api result info */
     return (
         <div className="searchedCity">
