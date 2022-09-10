@@ -11,6 +11,8 @@ export const useSearchCityAPI = async (cityName, setSearchedCityDetails, setIsLo
             setSearchedCityDetails(response)
             //await new Promise(resolve => setTimeout(resolve, 1000));
             setIsLoading(false)
+        }).catch(function (error){
+            console.log(error.toJSON())
         })
 
     }
