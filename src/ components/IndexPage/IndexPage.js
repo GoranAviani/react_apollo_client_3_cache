@@ -27,7 +27,6 @@ const IndexPage = () => {
         setShowHomePage(false)
 
         await useSearchCityAPI(cityName, setSearchedCityDetails, setIsLoading)
-
     }
 
 
