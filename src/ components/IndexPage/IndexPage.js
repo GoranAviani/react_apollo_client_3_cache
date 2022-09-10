@@ -22,10 +22,11 @@ const IndexPage = () => {
         setShowSearchResult(false)
     }
 
-    const searchCityAPIHandler =  (cityName) => {
+    const searchCityAPIHandler = async (cityName) => {
         /* check input */
         setIsLoading(true)
-         useSearchCityAPI(cityName, setSearchedCityDetails, setIsLoading)
+        console.log({isLoading})
+        await useSearchCityAPI(cityName, setSearchedCityDetails, setIsLoading)
 
     }
 
@@ -36,6 +37,7 @@ const IndexPage = () => {
         <div className="indexPage">
             <Logo goHome={goHome}/>
             <Navigation searchCityAPIHandler={searchCityAPIHandler}/>
+            {isLoading ? "aaaaaaaaa" : "not"}
             {isLoading ? "loading" : (searchedCityDetails ? <SearchedCity searchedCityDetails={searchedCityDetails}/> : <DefaultCities/>)}
 
             <Footer/>

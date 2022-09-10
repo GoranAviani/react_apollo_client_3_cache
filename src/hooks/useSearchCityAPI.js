@@ -3,9 +3,9 @@ import createAxiosClient from "./axiosClient";
 export const useSearchCityAPI = async (cityName, setSearchedCityDetails, setIsLoading) => {
 
 
-    const axiosClient =  createAxiosClient()
+    const axiosClient = await createAxiosClient()
     /* get city weather via api */
-    const searchCityGet =  () => {
+    const searchCityGet = async () => {
         axiosClient.get().then((response)=> { setSearchedCityDetails(response) })
         // await new Promise(resolve => setTimeout(resolve, 1000));
 
