@@ -14,7 +14,7 @@ import './IndexPage.css'
 const IndexPage = () => {
 
     const [showHomePage, setShowHomePage] = useState(true)
-    const [searchedCityDetails, setSearchedCityDetails] = useState(false)
+    const [searchedCityDetails, setSearchedCityDetails] = useState()
     const [isLoading, setIsLoading] = useState(false)
 
 
