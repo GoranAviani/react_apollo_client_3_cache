@@ -24,8 +24,6 @@ const IndexPage = () => {
 
     const searchCityAPIHandler = async (cityName) => {
         /* check input */
-        await setIsLoading(true)
-        console.log({isLoading})
         await useSearchCityAPI(cityName, setSearchedCityDetails, setIsLoading)
 
     }
