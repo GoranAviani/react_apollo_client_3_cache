@@ -22,10 +22,10 @@ const IndexPage = () => {
         setShowSearchResult(false)
     }
 
-    const searchCityAPIHandler = async (cityName) => {
+    const searchCityAPIHandler =  (cityName) => {
         /* check input */
         setIsLoading(true)
-        await useSearchCityAPI(cityName, setSearchedCityDetails, setIsLoading)
+         useSearchCityAPI(cityName, setSearchedCityDetails, setIsLoading)
 
     }
 
