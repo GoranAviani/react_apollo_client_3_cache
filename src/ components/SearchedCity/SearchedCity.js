@@ -24,7 +24,7 @@ const SearchedCity = ({searchedCityDetails}) => {
             <div className="searchedCityOtherDetails">
                 <div>
                     <div className="lowestTemperatureTitle">Daily lowest</div>
-                    <div className="lowestTemperatureNumber">{searchedCityDetailsdata.cityName}</div>
+                    <div className="lowestTemperatureNumber">{searchedCityDetails.data.cityName}</div>
                 </div>
                 <div>
                     <div className="highestTemperatureTitle">Daily highest</div>
