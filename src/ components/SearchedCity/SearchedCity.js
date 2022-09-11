@@ -11,7 +11,7 @@ const SearchedCity = ({searchedCityDetails}) => {
             <div className="searchedCityMainDetails">
                 <div className="currentTemperature">
                     <div className="currentTemperatureTitle">Temperature</div>
-                    <div className="currentTemperatureNumber">{searchedCityDetails.data.cityName} </div>
+                    <div className="currentTemperatureNumber">{JSON.stringify(searchedCityDetails.data)} </div>
                 </div>
                 <div className="citsearchedCityInfoName">
                             {searchedCityDetails.data.cityName}
