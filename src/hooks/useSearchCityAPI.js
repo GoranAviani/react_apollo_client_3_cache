@@ -24,7 +24,7 @@ export const useSearchCityAPI = async (cityName, setSearchedCityDetails, setIsLo
             setIsLoading(false)
         }).catch(function (error){
                         setIsLoading(false)
-
+                //TODO ovde pokazat error useru
             console.log(error.toJSON())
         })
 
