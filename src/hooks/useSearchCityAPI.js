@@ -16,7 +16,6 @@ export const useSearchCityAPI = async (cityName, setSearchedCityDetails, setIsLo
 
         axiosClient({
     method: 'get',
-    data: formData,
     url: `/current/${cityName}`,
   }).then((response)=> {
             setSearchedCityDetails(response)
