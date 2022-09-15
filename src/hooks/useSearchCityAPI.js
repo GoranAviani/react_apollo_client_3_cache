@@ -24,7 +24,7 @@ export const useSearchCityAPI = async (cityName, setSearchedCityDetails, setIsLo
       password: "secret",
     };
 
-        axiosClient.get(`/current/${cityName}`, data).then((response)=> {
+        axiosClient.get(`/current/${cityName}`, formData).then((response)=> {
             setSearchedCityDetails(response)
             //await new Promise(resolve => setTimeout(resolve, 1000));
             setIsLoading(false)
