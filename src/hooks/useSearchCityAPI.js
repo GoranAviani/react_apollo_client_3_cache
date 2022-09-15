@@ -14,10 +14,17 @@ export const useSearchCityAPI = async (cityName, setSearchedCityDetails, setIsLo
 
        // axiosClient.get(`/current/${cityName}`, formData).
 
-        axiosClient({
-    method: 'get',
-    url: `/current/${cityName}`,
-  }).then((response)=> {
+    //    axiosClient({
+    //method: 'get',
+   // params: formData,
+   // url: `/current/${cityName}`,
+ // }).
+         const data = {
+      username: "johndoe",
+      password: "secret",
+    };
+
+        axiosClient.get(`/current/${cityName}`, data).then((response)=> {
             setSearchedCityDetails(response)
             //await new Promise(resolve => setTimeout(resolve, 1000));
             setIsLoading(false)
