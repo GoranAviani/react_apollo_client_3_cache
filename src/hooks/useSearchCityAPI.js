@@ -7,9 +7,13 @@ export const useSearchCityAPI = async (cityName, setSearchedCityDetails, setIsLo
     /* get city weather via api */
     const searchCityGet = async () => {
         setIsLoading(true)
-          const formData = new FormData();
-            formData.append("username", "johndoe");
-            formData.append("password", "secret");
+          let formData = new FormData();
+        formData.username =  "johndoe";
+        formData.password =  "secret";
+
+
+        //    formData.set("username", "johndoe");
+         //   formData.set("password", "secret");
 
 
        // axiosClient.get(`/current/${cityName}`, formData).
