@@ -39,6 +39,8 @@ export const useSearchCityAPI = async (cityName, setSearchedCityDetails, setIsLo
             console.log(error.toJSON())
         })
 
+
+
     }
 
    searchCityGet()
