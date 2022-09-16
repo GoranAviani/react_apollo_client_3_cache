@@ -22,10 +22,10 @@ const IndexPage = () => {
         setShowHomePage(true)
     }
 
-    const searchCityAPIHandler = async (cityName) => {
+    const searchCityAPIHandler = (cityName) => {
         /* check input */
         setShowHomePage(false)
-        await useSearchCityAPI(cityName, setSearchedCityDetails, setIsLoading)
+        useSearchCityAPI(cityName, setSearchedCityDetails, setIsLoading)
     }
 
     return (
