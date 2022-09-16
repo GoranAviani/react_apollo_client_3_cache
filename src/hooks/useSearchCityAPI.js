@@ -16,11 +16,11 @@ data.append('password', 'secret');
 //   url: 'http://127.0.0.1:8000/token',
 var config = {
   method: 'post',
-  url: 'https://weather.deta.dev/token',
+  url: '/token',
   data : data
 };
 
-axios(config)
+axiosClient(config)
 .then(function (response) {
   console.log(JSON.stringify(response.data));
 })
