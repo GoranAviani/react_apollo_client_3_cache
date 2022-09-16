@@ -22,10 +22,18 @@ export const useSearchCityAPI = async (cityName, setSearchedCityDetails, setIsLo
    // params: formData,
    // url: `/current/${cityName}`,
  // }).
-         const data = {
-      username: "johndoe",
-      password: "secret",
-    };
+
+        var axios = require('axios');
+var FormData = require('form-data');
+var data = new FormData();
+data.append('username', 'johndoe');
+data.append('password', 'secret');
+//   url: 'http://127.0.0.1:8000/token',
+var config = {
+  method: 'post',
+  url: 'https://weather.deta.dev/token',
+  data : data
+};
 
         axiosClient.get(`/current/${cityName}`, formData).then((response)=> {
             setSearchedCityDetails(response)
@@ -44,4 +52,4 @@ export const useSearchCityAPI = async (cityName, setSearchedCityDetails, setIsLo
    searchCityGet()
 
    // return {status: true, showResults: true, cityName: cityName, weatherNow: "rain", api: res}
-    }
+  }
