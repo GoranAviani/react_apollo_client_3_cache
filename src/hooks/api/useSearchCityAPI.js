@@ -1,4 +1,5 @@
 import createAxiosClient from "./axiosClient";
+import get
 import {useEffect, useState} from "react";
 
 export const useSearchCityAPI = async (cityName, setSearchedCityDetails, setIsLoading) => {
@@ -9,25 +10,6 @@ export const useSearchCityAPI = async (cityName, setSearchedCityDetails, setIsLo
     const searchCityGet = async () => {
         setIsLoading(true)
 
-var FormData = require('form-data');
-var data = new FormData();
-data.append('username', 'johndoe');
-data.append('password', 'secret');
-//   url: 'http://127.0.0.1:8000/token',
-var config = {
-  method: 'post',
-  url: '/token',
-  data : data
-};
-
-const accessKey = axiosClient(config)
-.then(function (response) {
-  console.log(JSON.stringify(response.data));
-  return (response.data.access_token)
-})
-.catch(function (error) {
-  console.log(error);
-});
 
 
 if (accessKey){
