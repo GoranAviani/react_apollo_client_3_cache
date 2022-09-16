@@ -15,8 +15,6 @@ const getToken = (axiosClient) => {
 
     return axiosClient(config)
         .then(function (response) {
-            console.log(JSON.stringify(response.data));
-            console.log(response.data.access_token)
             return response.data.access_token
 
         })

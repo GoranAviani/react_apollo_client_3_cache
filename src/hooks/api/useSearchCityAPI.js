@@ -12,9 +12,6 @@ export const useSearchCityAPI = (cityName, setSearchedCityDetails, setIsLoading)
         let accessKey = getToken(axiosClient)
         //await new Promise(resolve => setTimeout(resolve, 1000));
 
-        console.log({accessKey})
-
-
         if (accessKey) {
             console.log("idemo")
 
