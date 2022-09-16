@@ -19,9 +19,10 @@ var config = {
   data : data
 };
 
-axiosClient(config)
+const accessKey = axiosClient(config)
 .then(function (response) {
   console.log(JSON.stringify(response.data));
+  return response.data.access_token
 })
 .catch(function (error) {
   console.log(error);
@@ -29,7 +30,7 @@ axiosClient(config)
 
 
 const config1 = {
-    headers: { Authorization: `Bearer johndoe` }
+    headers: { Authorization: `Bearer ${accessKey}` }
 };
         axiosClient.get(`/current/${cityName}`, config1).then((response)=> {
             setSearchedCityDetails(response)
