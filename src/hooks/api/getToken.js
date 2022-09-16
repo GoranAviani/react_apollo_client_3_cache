@@ -16,7 +16,6 @@ const getToken = (axiosClient) => {
     return axiosClient(config)
         .then(function (response) {
             return response.data.access_token
-
         })
         .catch(function (error) {
             console.log(error);

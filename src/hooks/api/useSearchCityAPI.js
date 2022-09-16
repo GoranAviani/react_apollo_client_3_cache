@@ -9,12 +9,11 @@ export const useSearchCityAPI = (cityName, setSearchedCityDetails, setIsLoading)
     /* get city weather via api */
     const searchCityGet = async () => {
         setIsLoading(true)
-        let accessKey = getToken(axiosClient)
+        const accessKey = getToken(axiosClient)
         //await new Promise(resolve => setTimeout(resolve, 1000));
 
         if (accessKey) {
-            console.log("idemo")
-
+            getCurrentWeather()
             const config1 = {
                 headers: {Authorization: `Bearer ${accessKey}`}
             };
