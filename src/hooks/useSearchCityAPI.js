@@ -21,10 +21,10 @@ var config = {
   data : data
 };
 
-const accessKey = axiosClient(config)
+axiosClient(config)
 .then(function (response) {
   console.log(JSON.stringify(response.data));
-  return response.data.access_token
+  setAccessKey(response.data.access_token)
 })
 .catch(function (error) {
   console.log(error);
