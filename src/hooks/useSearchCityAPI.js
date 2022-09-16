@@ -1,6 +1,8 @@
 import createAxiosClient from "./axiosClient";
+import {useState} from "react";
 
 export const useSearchCityAPI = async (cityName, setSearchedCityDetails, setIsLoading) => {
+        const [accessKey, setAccessKey] = useState()
 
 
     const axiosClient = await createAxiosClient()
