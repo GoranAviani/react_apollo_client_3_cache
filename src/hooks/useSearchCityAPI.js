@@ -28,9 +28,6 @@ axiosClient(config)
 });
 
 
-var data1 = new FormData();
-data1.append('access_token', 'johndoe');
-data1.append('token_type', 'bearer');
 const config1 = {
     headers: { Authorization: `Bearer johndoe` }
 };
