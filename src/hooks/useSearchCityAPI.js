@@ -40,7 +40,7 @@ export const useSearchCityAPI = async (cityName, setSearchedCityDetails, setIsLo
 
     }
 
-    searchCityGet()
+   searchCityGet()
 
    // return {status: true, showResults: true, cityName: cityName, weatherNow: "rain", api: res}
     }
