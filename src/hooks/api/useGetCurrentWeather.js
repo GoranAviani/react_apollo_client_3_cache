@@ -1,4 +1,4 @@
-const getCurrentWeather = (axiosClient, accessKey, cityName, setIsLoading, setSearchedCityDetails) => {
+const useGetCurrentWeather = (axiosClient, accessKey, cityName, setIsLoading, setSearchedCityDetails) => {
 
     const config1 = {
         headers: {Authorization: `Bearer ${accessKey}`}
@@ -16,4 +16,4 @@ const getCurrentWeather = (axiosClient, accessKey, cityName, setIsLoading, setSe
 
 }
 
-export default getCurrentWeather;
+export default useGetCurrentWeather;

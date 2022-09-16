@@ -1,6 +1,6 @@
 const FormData = require("form-data");
 
-const getToken = (axiosClient) => {
+const useGetToken = (axiosClient) => {
 
     const data = new FormData();
     data.append('username', 'johndoe');
@@ -23,4 +23,4 @@ const getToken = (axiosClient) => {
 }
 
 
-export default getToken;
+export default useGetToken;

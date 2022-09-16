@@ -1,6 +1,6 @@
 import createAxiosClient from "./axiosClient";
-import getToken from "./getToken";
-import getCurrentWeather from "./getCurrentWeather";
+import useGetToken from "./useGetToken";
+import useGetCurrentWeather from "./useGetCurrentWeather";
 import {useEffect, useState} from "react";
 
 export const useSearchCityAPI = (cityName, setSearchedCityDetails, setIsLoading) => {
@@ -10,9 +10,9 @@ export const useSearchCityAPI = (cityName, setSearchedCityDetails, setIsLoading)
     /* get city weather via api */
     const searchCityGet = async () => {
         setIsLoading(true)
-        const accessKey = getToken(axiosClient)
+        const accessKey = useGetToken(axiosClient)
         //await new Promise(resolve => setTimeout(resolve, 1000));
-        getCurrentWeather(axiosClient, accessKey, cityName, setIsLoading, setSearchedCityDetails)
+        useGetCurrentWeather(axiosClient, accessKey, cityName, setIsLoading, setSearchedCityDetails)
 
 
     }
