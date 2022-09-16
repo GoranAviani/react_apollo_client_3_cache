@@ -1,5 +1,5 @@
 import createAxiosClient from "./axiosClient";
-import get
+import getToken from "./getToken";
 import {useEffect, useState} from "react";
 
 export const useSearchCityAPI = async (cityName, setSearchedCityDetails, setIsLoading) => {
@@ -9,7 +9,7 @@ export const useSearchCityAPI = async (cityName, setSearchedCityDetails, setIsLo
     /* get city weather via api */
     const searchCityGet = async () => {
         setIsLoading(true)
-
+    const accessKey = getToken()
 
 
 if (accessKey){
