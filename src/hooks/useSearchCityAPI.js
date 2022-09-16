@@ -1,8 +1,7 @@
 import createAxiosClient from "./axiosClient";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 export const useSearchCityAPI = async (cityName, setSearchedCityDetails, setIsLoading) => {
-        const [accessKey, setAccessKey] = useState()
 
 
     const axiosClient = await createAxiosClient()
@@ -21,17 +20,19 @@ var config = {
   data : data
 };
 
-axiosClient(config)
+const accessKey = axiosClient(config)
 .then(function (response) {
   console.log(JSON.stringify(response.data));
-  setAccessKey(response.data.access_token)
+  return (response.data.access_token)
 })
 .catch(function (error) {
   console.log(error);
 });
 
 
-const config1 = {
+if (accessKey){
+
+    const config1 = {
     headers: { Authorization: `Bearer ${accessKey}` }
 };
         axiosClient.get(`/current/${cityName}`, config1).then((response)=> {
@@ -43,6 +44,9 @@ const config1 = {
                 //TODO ovde pokazat error useru
             console.log(error.toJSON())
         })
+
+}
+
 
 
 
