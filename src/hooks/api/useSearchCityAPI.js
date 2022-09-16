@@ -2,39 +2,41 @@ import createAxiosClient from "./axiosClient";
 import getToken from "./getToken";
 import {useEffect, useState} from "react";
 
-export const useSearchCityAPI = async (cityName, setSearchedCityDetails, setIsLoading) => {
+export const useSearchCityAPI = (cityName, setSearchedCityDetails, setIsLoading) => {
 
 
-    const axiosClient = await createAxiosClient()
+    const axiosClient = createAxiosClient()
     /* get city weather via api */
     const searchCityGet = async () => {
         setIsLoading(true)
-    const accessKey = getToken()
+        let accessKey = getToken(axiosClient)
+        //await new Promise(resolve => setTimeout(resolve, 1000));
+
+        console.log({accessKey})
 
 
-if (accessKey){
+        if (accessKey) {
+            console.log("idemo")
 
-    const config1 = {
-    headers: { Authorization: `Bearer ${accessKey}` }
-};
-        axiosClient.get(`/current/${cityName}`, config1).then((response)=> {
-            setSearchedCityDetails(response)
-            //await new Promise(resolve => setTimeout(resolve, 1000));
-            setIsLoading(false)
-        }).catch(function (error){
-                        setIsLoading(false)
+            const config1 = {
+                headers: {Authorization: `Bearer ${accessKey}`}
+            };
+            axiosClient.get(`/current/${cityName}`, config1).then((response) => {
+                setSearchedCityDetails(response)
+                //await new Promise(resolve => setTimeout(resolve, 1000));
+                setIsLoading(false)
+            }).catch(function (error) {
+                setIsLoading(false)
                 //TODO ovde pokazat error useru
-            console.log(error.toJSON())
-        })
+                console.log(error.toJSON())
+            })
 
-}
-
-
+        }
 
 
     }
 
-   searchCityGet()
+    searchCityGet()
 
-   // return {status: true, showResults: true, cityName: cityName, weatherNow: "rain", api: res}
-  }
+    // return {status: true, showResults: true, cityName: cityName, weatherNow: "rain", api: res}
+}
