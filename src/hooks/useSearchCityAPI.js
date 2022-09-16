@@ -1,4 +1,5 @@
 import createAxiosClient from "./axiosClient";
+import FormData from "form-data";
 
 export const useSearchCityAPI = async (cityName, setSearchedCityDetails, setIsLoading) => {
 
