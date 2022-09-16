@@ -9,20 +9,6 @@ export const useSearchCityAPI = async (cityName, setSearchedCityDetails, setIsLo
     const searchCityGet = async () => {
         setIsLoading(true)
 
-
-
-        //    formData.set("username", "johndoe");
-         //   formData.set("password", "secret");
-
-
-       // axiosClient.get(`/current/${cityName}`, formData).
-
-    //    axiosClient({
-    //method: 'get',
-   // params: formData,
-   // url: `/current/${cityName}`,
- // }).
-
         var axios = require('axios');
 var FormData = require('form-data');
 var data = new FormData();
