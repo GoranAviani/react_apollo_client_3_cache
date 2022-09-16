@@ -8,9 +8,7 @@ export const useSearchCityAPI = async (cityName, setSearchedCityDetails, setIsLo
     /* get city weather via api */
     const searchCityGet = async () => {
         setIsLoading(true)
-          let formData = new FormData();
-        formData.username =  "johndoe";
-        formData.password =  "secret";
+
 
 
         //    formData.set("username", "johndoe");
