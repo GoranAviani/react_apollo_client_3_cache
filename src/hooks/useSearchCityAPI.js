@@ -8,7 +8,6 @@ export const useSearchCityAPI = async (cityName, setSearchedCityDetails, setIsLo
     const searchCityGet = async () => {
         setIsLoading(true)
 
-        var axios = require('axios');
 var FormData = require('form-data');
 var data = new FormData();
 data.append('username', 'johndoe');
