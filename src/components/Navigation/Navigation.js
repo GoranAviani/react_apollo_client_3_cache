@@ -8,9 +8,10 @@ import LoginRegister from "../LoginRegister/LoginRegister";
 
 const Navigation = () => {
     return (
-        <div className="logo">
-            <Link to="/dashboard">Dashboard</Link>
+        <div className="navigation">
             <Link to="/">Index
+
+                <Link to="/dashboard">Dashboard</Link>
             </Link>
             <LoginRegister/>
 

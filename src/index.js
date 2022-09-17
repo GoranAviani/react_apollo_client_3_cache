@@ -6,8 +6,10 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import IndexPage from "./ components/IndexPage/IndexPage";
-import Dashboard from "./ components/Dashboard/Dashboard";
+import IndexPage from "./components/IndexPage/IndexPage";
+import Dashboard from "./components/Dashboard/Dashboard";
+import LoginForm from "./components/LoginRegister/LoginForm";
+import RegistrationForm from "./components/LoginRegister/RegistrationForm";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,6 +18,9 @@ root.render(
             <Routes>
                 <Route path="/" element={<IndexPage/>}/>
                 <Route path="/dashboard" element={<Dashboard/>}/>
+                <Route path="/login" element={<LoginForm/>}/>
+                <Route path="/registration" element={<RegistrationForm/>}/>
+
             </Routes>
         </BrowserRouter>
     </React.StrictMode>
