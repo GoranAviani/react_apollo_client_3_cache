@@ -3,6 +3,7 @@ import React from "react";
 import {Link} from "react-router-dom";
 
 import './Navigation.css'
+import LoginRegister from "../LoginRegister/LoginRegister";
 
 
 const Navigation = () => {
@@ -11,6 +12,8 @@ const Navigation = () => {
             <Link to="/dashboard">Dashboard</Link>
             <Link to="/">Index
             </Link>
+            <LoginRegister/>
+
         </div>
     )
 }
