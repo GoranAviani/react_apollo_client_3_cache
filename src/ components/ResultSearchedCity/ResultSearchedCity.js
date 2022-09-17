@@ -2,8 +2,8 @@ import React from "react";
 
 import './ResultSearchedCity.css'
 
-const SearchedCity = ({searchedCityDetails}) => {
-    console.log('SearchedCity')
+const ResultSearchedCity = ({searchedCityDetails}) => {
+    console.log('ResultSearchedCity')
     console.log({searchedCityDetails})
     /* unpack api result info */
     return (
@@ -14,7 +14,7 @@ const SearchedCity = ({searchedCityDetails}) => {
                     <div className="currentTemperatureNumber">{JSON.stringify(searchedCityDetails.data)} </div>
                 </div>
                 <div className="citsearchedCityInfoName">
-                            {searchedCityDetails.data.cityName}
+                    {searchedCityDetails.data.cityName}
                 </div>
                 <div>
                     <div className="currentWeatherIcon">weather Icon</div>
@@ -39,4 +39,4 @@ const SearchedCity = ({searchedCityDetails}) => {
     )
 }
 
-export default SearchedCity;
+export default ResultSearchedCity;
