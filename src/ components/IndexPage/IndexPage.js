@@ -4,7 +4,7 @@ import SearchSection from "../SearchSection/SearchSection";
 import DefaultCities from "../DefaultCities/DefaultCities";
 import Footer from "../Footer/Footer";
 import ResultSearchedCity from "../ResultSearchedCity/ResultSearchedCity";
-import Logo from "../Logo/Logo";
+import Navigation from "../Logo/Logo";
 
 import {useSearchCityAPI} from "../../hooks/api/useSearchCityAPI";
 
