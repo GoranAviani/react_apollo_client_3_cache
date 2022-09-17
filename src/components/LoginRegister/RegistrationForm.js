@@ -8,6 +8,7 @@ const RegistrationForm = () => {
     return (
         <div className="loginregister">
             REGISTRATION FORM
+            <br/>
             USERNAME:
             <br/>
             <br/>
