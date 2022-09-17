@@ -25,7 +25,7 @@ const IndexPage = () => {
     return (
 
         <div className="indexPage">
-            <Logo/>
+            <Navigation/>
             <SearchSection searchCityAPIHandler={searchCityAPIHandler}/>
             {isLoading ? "loading" : searchedCityDetails ?
                 <ResultSearchedCity searchedCityDetails={searchedCityDetails}/> :
