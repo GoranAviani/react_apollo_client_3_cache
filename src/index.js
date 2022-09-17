@@ -17,7 +17,7 @@ root.render(
             <Routes>
                 <Route path="/" element={<IndexPage/>}/>
                 <Route path="/dashboard" element={<Dashboard/>}/>
-                <Route path="/loginregister" element={<LoginRegister/>}/>
+                <Route path="/login-register" element={<LoginRegister/>}/>
             </Routes>
         </BrowserRouter>
     </React.StrictMode>
