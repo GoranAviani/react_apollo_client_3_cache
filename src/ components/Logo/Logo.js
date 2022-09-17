@@ -5,11 +5,12 @@ import {Link} from "react-router-dom";
 import './Logo.css'
 
 
-const Logo = ({goHome}) => {
+const Logo = () => {
     return (
         <div className="logo">
             <Link to="/dashboard">Dashboard</Link>
-            <button onClick={()=>{goHome()}}>Go home</button>
+            <Link to="/">Index
+            </Link>
         </div>
     )
 }

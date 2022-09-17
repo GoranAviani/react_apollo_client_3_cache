@@ -13,30 +13,22 @@ import './IndexPage.css'
 
 const IndexPage = () => {
 
-    const [showHomePage, setShowHomePage] = useState(true)
     const [searchedCityDetails, setSearchedCityDetails] = useState()
     const [isLoading, setIsLoading] = useState(false)
     const [accessKey, setAccessKey] = useState()
 
-
-    const goHome = () => {
-        setShowHomePage(true)
-    }
-
     const searchCityAPIHandler = (cityName) => {
         /* check input */
-        setShowHomePage(false)
         useSearchCityAPI(accessKey, setAccessKey, cityName, setSearchedCityDetails, setIsLoading)
     }
 
     return (
 
         <div className="indexPage">
-            <Logo goHome={goHome}/>
+            <Logo/>
             <Navigation searchCityAPIHandler={searchCityAPIHandler}/>
-            {showHomePage ? <DefaultCities/> :
-                isLoading ? "loading" :
-                    (searchedCityDetails && <SearchedCity searchedCityDetails={searchedCityDetails}/>)}
+            {isLoading ? "loading" : <DefaultCities/>}
+            {!isLoading && searchedCityDetails && <SearchedCity searchedCityDetails={searchedCityDetails}/>}
             <Footer/>
         </div>
 
