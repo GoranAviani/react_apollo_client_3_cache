@@ -8,6 +8,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import IndexPage from "./components/IndexPage/IndexPage";
 import Dashboard from "./components/Dashboard/Dashboard";
+import LoginRegister from "./components/LoginRegister/LoginRegister";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,6 +17,7 @@ root.render(
             <Routes>
                 <Route path="/" element={<IndexPage/>}/>
                 <Route path="/dashboard" element={<Dashboard/>}/>
+                <Route path="/loginregister" element={<LoginRegister/>}/>
             </Routes>
         </BrowserRouter>
     </React.StrictMode>
