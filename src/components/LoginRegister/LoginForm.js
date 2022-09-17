@@ -1,23 +1,22 @@
 import React from "react";
-import {Button} from "@mui/material";
 
 import './LoginRegister.css'
+import {Link} from "react-router-dom";
 
 const LoginForm = () => {
 
     return (
         <div className="loginregister">
-        USERNAME:
+            USERNAME:
             <br/>
-                        <br/>
+            <br/>
 
             PASSWORD:
-                        <br/>
+            <br/>
             <br/>
 
-            Dont have account? <Button variant="outlined">
-            Register
-        </Button>
+            Dont have account? <Link to="/registration">Registraion</Link>
+
         </div>
     )
 }
