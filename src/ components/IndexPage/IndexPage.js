@@ -8,7 +8,6 @@ import Logo from "../Logo/Logo";
 
 import {useSearchCityAPI} from "../../hooks/api/useSearchCityAPI";
 
-
 import './IndexPage.css'
 
 
