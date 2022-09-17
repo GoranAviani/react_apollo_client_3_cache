@@ -17,6 +17,4 @@ export const useSearchCityAPI = (accessKey, setAccessKey, cityName, setSearchedC
     }
 
     searchCityGet()
-
-    // return {status: true, showResults: true, cityName: cityName, weatherNow: "rain", api: res}
 }
