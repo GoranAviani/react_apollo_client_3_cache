@@ -2,7 +2,6 @@ import {WEATHER_PASSWORD, WEATHER_USERNAME} from "../../SECRETS";
 
 const FormData = require("form-data");
 
-
 const useGetToken = (axiosClient, setAccessKey) => {
 
     const data = new FormData();
