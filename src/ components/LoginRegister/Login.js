@@ -3,7 +3,7 @@ import {Button} from "@mui/material";
 
 import './LoginRegister.css'
 
-const Login = () => {
+const LoginForm = () => {
 
     return (
         <div className="loginregister">
@@ -18,4 +18,4 @@ const Login = () => {
 }
 
 
-export default Login;
+export default LoginForm;
