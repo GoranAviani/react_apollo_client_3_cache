@@ -2,7 +2,6 @@ const FormData = require("form-data");
 
 const useGetToken = (axiosClient, setAccessKey) => {
 
-
     const data = new FormData();
     data.append('username', 'johndoe');
     data.append('password', 'secret');
