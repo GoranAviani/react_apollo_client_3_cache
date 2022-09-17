@@ -1,6 +1,6 @@
 import React from 'react';
 
-import IndexPage from "./ components/IndexPage/IndexPage";
+import IndexPage from "./components/IndexPage/IndexPage";
 
 
 

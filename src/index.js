@@ -6,8 +6,8 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import IndexPage from "./ components/IndexPage/IndexPage";
-import Dashboard from "./ components/Dashboard/Dashboard";
+import IndexPage from "./components/IndexPage/IndexPage";
+import Dashboard from "./components/Dashboard/Dashboard";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
