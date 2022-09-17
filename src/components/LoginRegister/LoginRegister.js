@@ -9,10 +9,7 @@ const LoginRegister = () => {
 
     return (
         <div className="loginregister">
-            <Link to="/login-register">Login</Link>
-            <Button variant="outlined">
-                Login
-            </Button>
+            <Link to="/login">Login</Link>
             <Button variant="outlined">
                 Register
             </Button>
