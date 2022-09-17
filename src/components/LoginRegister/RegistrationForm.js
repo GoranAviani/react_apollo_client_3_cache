@@ -1,7 +1,7 @@
 import React from "react";
-import {Button} from "@mui/material";
 
 import './LoginRegister.css'
+import {Link} from "react-router-dom";
 
 const RegistrationForm = () => {
 
@@ -17,9 +17,8 @@ const RegistrationForm = () => {
             email: <br/>
             address:
             <br/> <br/>
-            Already have account? <Button variant="outlined">
-            Login
-        </Button>
+            Already have account? <Link to="/login">Login</Link>
+
         </div>
     )
 }
