@@ -2,22 +2,29 @@ import React from "react";
 
 import './LoginRegister.css'
 import {Link} from "react-router-dom";
+import SimpleNavigation from "../Navigation/SimpleNavigation";
 
 const LoginForm = () => {
 
     return (
-        <div className="loginregister">
-            USERNAME:
-            <br/>
-            <br/>
+        <>
+            <SimpleNavigation/>
 
-            PASSWORD:
-            <br/>
-            <br/>
+            <div className="loginregister">
+                USERNAME:
+                <br/>
+                <br/>
 
-            Dont have account? <Link to="/registration">Registraion</Link>
+                PASSWORD:
+                <br/>
+                <br/>
 
-        </div>
+                Dont have account? <Link to="/registration">Registraion</Link>
+
+            </div>
+        </>
+
+
     )
 }
 
