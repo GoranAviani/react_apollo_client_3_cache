@@ -1,12 +1,13 @@
 import React, {useState} from "react";
 
-import {useSearchCityAPI} from "../../hooks/api/useSearchCityAPI";
-
 import Navigation from "../Navigation/Navigation";
 import DefaultCities from "../DefaultCities/DefaultCities";
 import Footer from "../Footer/Footer";
 import SearchedCity from "../SearchedCity/SearchedCity";
 import Logo from "../Logo/Logo";
+
+import {useSearchCityAPI} from "../../hooks/api/useSearchCityAPI";
+
 
 import './IndexPage.css'
 
