@@ -1,45 +1,35 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 
-import {useSearchCityAPI} from "../../hooks/useSearchCityAPI";
-
-import Navigation from "../Navigation/Navigation";
+import SearchSection from "../SearchSection/SearchSection";
 import DefaultCities from "../DefaultCities/DefaultCities";
 import Footer from "../Footer/Footer";
-import SearchedCity from "../SearchedCity/SearchedCity";
-import Logo from "../Logo/Logo";
+import ResultSearchedCity from "../ResultSearchedCity/ResultSearchedCity";
+import Navigation from "../Navigation/Navigation";
+
+import {useSearchCityAPI} from "../../hooks/api/useSearchCityAPI";
 
 import './IndexPage.css'
 
 
 const IndexPage = () => {
 
-    const [showSearchResult, setShowSearchResult] = useState(false)
-    const [searchedCityDetails, setSearchedCityDetails] = useState({status:""})
+    const [searchedCityDetails, setSearchedCityDetails] = useState()
+    const [isLoading, setIsLoading] = useState(false)
+    const [accessKey, setAccessKey] = useState()
 
-
-    const goHome = () => {
-        setShowSearchResult(false)
-    }
-
-    const searchCityAPIHandler = (userInput) => {
+    const searchCityAPIHandler = (cityName) => {
         /* check input */
-        const weatherApiResult = useSearchCityAPI(userInput)
-        console.log("index")
-        console.log(userInput)
-        console.log(weatherApiResult)
-        setShowSearchResult(true)
-        setSearchedCityDetails(weatherApiResult)
-
+        useSearchCityAPI(accessKey, setAccessKey, cityName, setSearchedCityDetails, setIsLoading)
     }
-
-
 
     return (
 
         <div className="indexPage">
-            <Logo goHome={goHome}/>
-            <Navigation searchCityAPIHandler={searchCityAPIHandler}/>
-            {showSearchResult ? <SearchedCity searchedCityDetails={searchedCityDetails}/> : <DefaultCities/>}
+            <Navigation/>
+            <SearchSection searchCityAPIHandler={searchCityAPIHandler}/>
+            {isLoading ? "loading" : searchedCityDetails ?
+                <ResultSearchedCity searchedCityDetails={searchedCityDetails}/> :
+                <DefaultCities/>}
             <Footer/>
         </div>
 
