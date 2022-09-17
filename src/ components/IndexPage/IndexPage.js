@@ -3,7 +3,7 @@ import React, {useState} from "react";
 import Navigation from "../Navigation/Navigation";
 import DefaultCities from "../DefaultCities/DefaultCities";
 import Footer from "../Footer/Footer";
-import SearchedCity from "../ResultSearchedCity/SearchedCity";
+import ResultSearchedCity from "../ResultSearchedCity/ResultSearchedCity";
 import Logo from "../Logo/Logo";
 
 import {useSearchCityAPI} from "../../hooks/api/useSearchCityAPI";
@@ -27,7 +27,8 @@ const IndexPage = () => {
         <div className="indexPage">
             <Logo/>
             <Navigation searchCityAPIHandler={searchCityAPIHandler}/>
-            {isLoading ? "loading" : searchedCityDetails ? <SearchedCity searchedCityDetails={searchedCityDetails}/> :
+            {isLoading ? "loading" : searchedCityDetails ?
+                <ResultSearchedCity searchedCityDetails={searchedCityDetails}/> :
                 <DefaultCities/>}
             <Footer/>
         </div>
