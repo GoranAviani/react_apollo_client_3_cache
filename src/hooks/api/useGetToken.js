@@ -1,10 +1,13 @@
+import {WEATHER_PASSWORD, WEATHER_USERNAME} from "../../SECRETS";
+
 const FormData = require("form-data");
+
 
 const useGetToken = (axiosClient, setAccessKey) => {
 
     const data = new FormData();
-    data.append('username', 'johndoe');
-    data.append('password', 'secret');
+    data.append('username', WEATHER_USERNAME);
+    data.append('password', WEATHER_PASSWORD);
     const config = {
         method: 'post',
         url: '/token',
