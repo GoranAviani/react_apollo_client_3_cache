@@ -5,7 +5,7 @@ import Search from "../Search/Search";
 
 import './Navigation.css'
 
-const Navigation = ({searchCityAPIHandler}) => {
+const SearchSection = ({searchCityAPIHandler}) => {
 
     return (
         <div className="navigation">
@@ -15,4 +15,4 @@ const Navigation = ({searchCityAPIHandler}) => {
     )
 }
 
-export default Navigation;
+export default SearchSection;

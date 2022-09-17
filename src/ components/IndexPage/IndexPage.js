@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-import Navigation from "../Navigation/Navigation";
+import SearchSection from "../Navigation/Navigation";
 import DefaultCities from "../DefaultCities/DefaultCities";
 import Footer from "../Footer/Footer";
 import ResultSearchedCity from "../ResultSearchedCity/ResultSearchedCity";
@@ -26,7 +26,7 @@ const IndexPage = () => {
 
         <div className="indexPage">
             <Logo/>
-            <Navigation searchCityAPIHandler={searchCityAPIHandler}/>
+            <SearchSection searchCityAPIHandler={searchCityAPIHandler}/>
             {isLoading ? "loading" : searchedCityDetails ?
                 <ResultSearchedCity searchedCityDetails={searchedCityDetails}/> :
                 <DefaultCities/>}
