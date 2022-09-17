@@ -8,7 +8,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import IndexPage from "./components/IndexPage/IndexPage";
 import Dashboard from "./components/Dashboard/Dashboard";
-import LoginForm from "./components/LoginRegister/Login";
+import LoginForm from "./components/LoginRegister/LoginForm";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
