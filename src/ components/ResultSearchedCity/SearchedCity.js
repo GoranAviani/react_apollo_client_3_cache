@@ -1,6 +1,6 @@
 import React from "react";
 
-import './SearchedCity.css'
+import './ResultSearchedCity.css'
 
 const SearchedCity = ({searchedCityDetails}) => {
     console.log('SearchedCity')
