@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-import SearchSection from "../Navigation/Navigation";
+import SearchSection from "../SearchSection/Navigation";
 import DefaultCities from "../DefaultCities/DefaultCities";
 import Footer from "../Footer/Footer";
 import ResultSearchedCity from "../ResultSearchedCity/ResultSearchedCity";
