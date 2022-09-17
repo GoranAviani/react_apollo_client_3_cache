@@ -16,6 +16,7 @@ const IndexPage = () => {
     const [showHomePage, setShowHomePage] = useState(true)
     const [searchedCityDetails, setSearchedCityDetails] = useState()
     const [isLoading, setIsLoading] = useState(false)
+    const [accessKey, setAccessKey] = useState()
 
 
     const goHome = () => {
@@ -25,7 +26,7 @@ const IndexPage = () => {
     const searchCityAPIHandler = (cityName) => {
         /* check input */
         setShowHomePage(false)
-        useSearchCityAPI(cityName, setSearchedCityDetails, setIsLoading)
+        useSearchCityAPI(accessKey, setAccessKey, cityName, setSearchedCityDetails, setIsLoading)
     }
 
     return (
