@@ -3,7 +3,7 @@ import React, {useState} from "react";
 import Navigation from "../Navigation/Navigation";
 import DefaultCities from "../DefaultCities/DefaultCities";
 import Footer from "../Footer/Footer";
-import SearchedCity from "../SearchedCity/SearchedCity";
+import SearchedCity from "../ResultSearchedCity/SearchedCity";
 import Logo from "../Logo/Logo";
 
 import {useSearchCityAPI} from "../../hooks/api/useSearchCityAPI";
