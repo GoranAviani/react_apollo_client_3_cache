@@ -1,10 +1,11 @@
 import createAxiosClient from "./axiosClient";
 import useGetToken from "./useGetToken";
 import useGetCurrentWeather from "./useGetCurrentWeather";
+
 import {useState} from "react";
 
 export const useSearchCityAPI = (cityName, setSearchedCityDetails, setIsLoading) => {
-    
+
     const axiosClient = createAxiosClient()
     /* get city weather via api */
     const searchCityGet = async () => {
