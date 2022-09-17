@@ -27,8 +27,8 @@ const IndexPage = () => {
         <div className="indexPage">
             <Logo/>
             <Navigation searchCityAPIHandler={searchCityAPIHandler}/>
-            {isLoading ? "loading" : <DefaultCities/>}
-            {!isLoading && searchedCityDetails && <SearchedCity searchedCityDetails={searchedCityDetails}/>}
+            {isLoading ? "loading" : searchedCityDetails ? <SearchedCity searchedCityDetails={searchedCityDetails}/> :
+                <DefaultCities/>}
             <Footer/>
         </div>
 
