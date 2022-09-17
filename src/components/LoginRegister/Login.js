@@ -7,9 +7,14 @@ const LoginForm = () => {
 
     return (
         <div className="loginregister">
-            <Button variant="outlined">
-                Login
-            </Button>
+        USERNAME:
+            <br/>
+                        <br/>
+
+            PASSWORD:
+                        <br/>
+            <br/>
+
             Dont have account? <Button variant="outlined">
             Register
         </Button>
