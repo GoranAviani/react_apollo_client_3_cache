@@ -1,6 +1,6 @@
-.search{
+.search {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-flow: column;
-    grid-gap: 15px;
+    grid-template-columns: 6fr 1fr;
+    grid-gap: 3vh;
+    height: 8vh;
 }
