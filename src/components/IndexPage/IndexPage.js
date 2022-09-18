@@ -18,6 +18,12 @@ const IndexPage = () => {
     const [isLoading, setIsLoading] = useState(false)
     const [accessKey, setAccessKey] = useState()
 
+
+    const clearSearchedCityDetails = () => {
+        console.log("ovaj efekt")
+        setSearchedCityDetails(null)
+    }
+
     const searchCityAPIHandler = (cityName) => {
         /* check input */
         useSearchCityAPI(accessKey, setAccessKey, cityName, setSearchedCityDetails, setIsLoading)
@@ -27,7 +33,7 @@ const IndexPage = () => {
         <div className="globalContainer">
 
             <div className="indexPage">
-                <Navigation/>
+                <Navigation clearSearchedCityDetails={clearSearchedCityDetails}/>
                 <SearchSection searchCityAPIHandler={searchCityAPIHandler}/>
                 {isLoading ? "loading" : searchedCityDetails ?
                     <ResultSearchedCity searchedCityDetails={searchedCityDetails}/> :
