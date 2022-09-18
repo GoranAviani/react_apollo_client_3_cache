@@ -6,10 +6,12 @@ import './Navigation.css'
 import LoginRegister from "../LoginRegister/LoginRegister";
 
 
-const Navigation = () => {
+const Navigation = ({setSearchedCityDetails}) => {
     return (
         <div className="navigation">
-            <Link to="/">Index
+            <Link to="/" onClick={() => {
+                setSearchedCityDetails(null)
+            }}>Index
 
                 <Link to="/dashboard">Dashboard</Link>
             </Link>

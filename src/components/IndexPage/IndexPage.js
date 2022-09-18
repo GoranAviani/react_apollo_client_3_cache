@@ -27,7 +27,7 @@ const IndexPage = () => {
         <div className="globalContainer">
 
             <div className="indexPage">
-                <Navigation/>
+                <Navigation setSearchedCityDetails={setSearchedCityDetails}/>
                 <SearchSection searchCityAPIHandler={searchCityAPIHandler}/>
                 {isLoading ? "loading" : searchedCityDetails ?
                     <ResultSearchedCity searchedCityDetails={searchedCityDetails}/> :
