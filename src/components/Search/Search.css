@@ -1,6 +1,12 @@
-.search{
+.search {
     display: grid;
     grid-template-columns: 1fr;
     grid-auto-flow: column;
     grid-gap: 15px;
+}
+
+@media screen and (max-width: 600px) {
+    .search {
+        grid-template-rows: 1fr 1fr;
+    }
 }
