@@ -6,6 +6,7 @@ const ResultSearchedCity = ({searchedCityDetails}) => {
     console.log({searchedCityDetails})
     /* unpack api result info */
     //JSON.stringify(searchedCityDetails.data)
+    console.log(searchedCityDetails.data)
     return (
         <div className="resultSearchedCity">
             <div className="searchedCityMainDetails">
@@ -14,7 +15,7 @@ const ResultSearchedCity = ({searchedCityDetails}) => {
                     <div className="currentTemperatureNumber">{} </div>
                 </div>
                 <div className="citsearchedCityInfoName">
-                    {searchedCityDetails.data.cityName}
+                    Name: {searchedCityDetails.data.location.name}
                 </div>
                 <div>
                     <div className="currentWeatherIcon">weather Icon</div>
