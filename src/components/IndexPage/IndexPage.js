@@ -20,7 +20,6 @@ const IndexPage = () => {
 
 
     const clearSearchedCityDetails = () => {
-        console.log("ovaj efekt")
         setSearchedCityDetails(null)
     }
 
