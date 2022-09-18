@@ -30,7 +30,7 @@ const IndexPage = () => {
             <div className="indexPage">
                 <Navigation setSearchedCityDetails={setSearchedCityDetails}/>
                 <SearchSection searchCityAPIHandler={searchCityAPIHandler}/>
-                {!isLoading ? <Loader/> : searchedCityDetails ?
+                {isLoading ? <Loader/> : searchedCityDetails ?
                     <ResultSearchedCity searchedCityDetails={searchedCityDetails}/> :
                     <DefaultCities/>}
                 <Footer/>
