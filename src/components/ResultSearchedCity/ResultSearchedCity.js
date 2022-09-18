@@ -5,12 +5,13 @@ import './ResultSearchedCity.css'
 const ResultSearchedCity = ({searchedCityDetails}) => {
     console.log({searchedCityDetails})
     /* unpack api result info */
+    //JSON.stringify(searchedCityDetails.data)
     return (
         <div className="resultSearchedCity">
             <div className="searchedCityMainDetails">
                 <div className="currentTemperature">
                     <div className="currentTemperatureTitle">Temperature</div>
-                    <div className="currentTemperatureNumber">{JSON.stringify(searchedCityDetails.data)} </div>
+                    <div className="currentTemperatureNumber">{} </div>
                 </div>
                 <div className="citsearchedCityInfoName">
                     {searchedCityDetails.data.cityName}
