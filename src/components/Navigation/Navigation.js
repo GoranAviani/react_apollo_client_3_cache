@@ -10,7 +10,6 @@ import {Button} from "@mui/material";
 const Navigation = ({setSearchedCityDetails}) => {
     return (
         <div className="navigation">
-            
             <Button
                 variant="contained"
                 color="primary"
