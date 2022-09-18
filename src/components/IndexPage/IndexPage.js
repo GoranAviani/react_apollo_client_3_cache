@@ -9,6 +9,7 @@ import Navigation from "../Navigation/Navigation";
 import {useSearchCityAPI} from "../../hooks/api/useSearchCityAPI";
 
 import './IndexPage.css'
+import '../../css/GlobalContainer.css'
 
 
 const IndexPage = () => {
@@ -23,14 +24,16 @@ const IndexPage = () => {
     }
 
     return (
+        <div className="globalContainer">
 
-        <div className="indexPage">
-            <Navigation/>
-            <SearchSection searchCityAPIHandler={searchCityAPIHandler}/>
-            {isLoading ? "loading" : searchedCityDetails ?
-                <ResultSearchedCity searchedCityDetails={searchedCityDetails}/> :
-                <DefaultCities/>}
-            <Footer/>
+            <div className="indexPage">
+                <Navigation/>
+                <SearchSection searchCityAPIHandler={searchCityAPIHandler}/>
+                {isLoading ? "loading" : searchedCityDetails ?
+                    <ResultSearchedCity searchedCityDetails={searchedCityDetails}/> :
+                    <DefaultCities/>}
+                <Footer/>
+            </div>
         </div>
 
     )

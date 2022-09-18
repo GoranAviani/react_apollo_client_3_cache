@@ -3,6 +3,6 @@
     background: aqua;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-gap: 2vh;
-    padding: 5vh 2vh 5vh 2vh;
-    height: calc(100vh - 10vh);
+    height: 100vh;
+
 }
