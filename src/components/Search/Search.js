@@ -9,7 +9,6 @@ const Search = ({searchCityAPIHandler}) => {
 
     const searchHandler = (e) => {
         setCityName(e.target.value)
-        console.log(cityName)
 
     }
 

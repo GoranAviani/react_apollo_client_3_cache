@@ -1,0 +1,9 @@
+
+.button-small {
+    height: 25px;
+}
+
+.center {
+    display: flex;
+    align-self: center;
+}
