@@ -4,6 +4,7 @@ import SearchSection from "../SearchSection/SearchSection";
 import DefaultCities from "../DefaultCities/DefaultCities";
 import Footer from "../Footer/Footer";
 import ResultSearchedCity from "../ResultSearchedCity/ResultSearchedCity";
+import Loader from "../Loader/Loader";
 import Navigation from "../Navigation/Navigation";
 
 import {useSearchCityAPI} from "../../hooks/api/useSearchCityAPI";
@@ -29,7 +30,7 @@ const IndexPage = () => {
             <div className="indexPage">
                 <Navigation setSearchedCityDetails={setSearchedCityDetails}/>
                 <SearchSection searchCityAPIHandler={searchCityAPIHandler}/>
-                {isLoading ? "loading" : searchedCityDetails ?
+                {isLoading ? <Loader/> : searchedCityDetails ?
                     <ResultSearchedCity searchedCityDetails={searchedCityDetails}/> :
                     <DefaultCities/>}
                 <Footer/>
