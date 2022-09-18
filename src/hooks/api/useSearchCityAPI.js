@@ -11,7 +11,6 @@ export const useSearchCityAPI = (accessKey, setAccessKey, cityName, setSearchedC
         setIsLoading(true)
         useGetToken(axiosClient, setAccessKey)
         //await new Promise(resolve => setTimeout(resolve, 1000));
-        console.log({accessKey})
         useGetCurrentWeather(axiosClient, accessKey, cityName, setIsLoading, setSearchedCityDetails)
 
 
