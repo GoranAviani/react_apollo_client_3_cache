@@ -7,7 +7,7 @@ import './SearchSection.css'
 const SearchSection = ({searchCityAPIHandler}) => {
 
     return (
-        <div className="navigation">
+        <div className="searchSection">
             <Search searchCityAPIHandler={searchCityAPIHandler}/>
         </div>
     )
