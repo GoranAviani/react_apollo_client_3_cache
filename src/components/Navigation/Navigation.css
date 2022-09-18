@@ -1,4 +1,6 @@
 .navigation {
+    display: flex;
+    justify-content: space-between;
     height: 7vh;
     border: 1px solid red;
 }

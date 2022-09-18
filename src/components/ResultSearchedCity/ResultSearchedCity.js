@@ -3,7 +3,6 @@ import React from "react";
 import './ResultSearchedCity.css'
 
 const ResultSearchedCity = ({searchedCityDetails}) => {
-    console.log('ResultSearchedCity')
     console.log({searchedCityDetails})
     /* unpack api result info */
     return (
