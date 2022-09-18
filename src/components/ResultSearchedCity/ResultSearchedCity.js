@@ -7,7 +7,7 @@ const ResultSearchedCity = ({searchedCityDetails}) => {
     console.log({searchedCityDetails})
     /* unpack api result info */
     return (
-        <div className="searchedCity">
+        <div className="resultSearchedCity">
             <div className="searchedCityMainDetails">
                 <div className="currentTemperature">
                     <div className="currentTemperatureTitle">Temperature</div>
