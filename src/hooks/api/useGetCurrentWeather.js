@@ -3,7 +3,6 @@ const useGetCurrentWeather = (axiosClient, accessKey, cityName, setIsLoading, se
     const config = {
         headers: {Authorization: `Bearer ${accessKey}`}
     };
-    console.log({config})
     axiosClient.get(`/current/${cityName}`, config).then((response) => {
         setSearchedCityDetails(response)
         //await new Promise(resolve => setTimeout(resolve, 1000));
