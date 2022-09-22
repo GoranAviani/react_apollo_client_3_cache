@@ -9,13 +9,12 @@ const Search = ({searchCityAPIHandler}) => {
 
     const searchFormHandler = (e) => {
         e.preventDefault()
-        console.log({cityInputRef})
         searchCityAPIHandler(cityInputRef.current.value)
     }
 
     return (
         <form onSubmit={searchFormHandler} className="search">
-            <TextField id="filled-basic" label="Search" variant="outlined" ref={cityInputRef}/>
+            <TextField id="filled-basic" label="Search" variant="outlined" inputRef={cityInputRef}/>
             <Button type="submit" variant="contained">Search</Button>
         </form>
     )
