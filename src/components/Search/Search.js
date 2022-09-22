@@ -9,7 +9,7 @@ const Search = ({searchCityAPIHandler}) => {
 
     const searchFormHandler = (e) => {
         e.preventDefault()
-        searchCityAPIHandler(cityInputRef)
+        searchCityAPIHandler(cityInputRef.current.value)
     }
 
     return (
