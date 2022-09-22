@@ -1,10 +1,18 @@
 import axios from "axios";
 
-const WEATHER_MICROSERVICE = "https://weather.deta.dev"
-const LOCAL_MICROWERVICE = "http://127.0.0.1:8000/"
+let BASE_URL = ""
+const ENVIRONMENT_TYPE = process.env.ENVIRONMENT_TYPE
 
-const createAxiosClient = () => {
-    return axios.create({baseURL: WEATHER_MICROSERVICE})
+if (ENVIRONMENT_TYPE === "dev") {
+    BASE_URL = "http://127.0.0.1:8000/"
+} else {
+    BASE_URL = "https://weather.deta.dev"
 }
 
-export default createAxiosClient;
+const createAxiosClient = () => {
+
+
+    return axios.create({baseURL: BASE_URL})
+}
+
+export default createAxiosClient();
