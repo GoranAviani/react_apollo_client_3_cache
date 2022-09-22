@@ -1,4 +1,4 @@
-import React, {useState, useRef} from "react";
+import React, {useState, useEffect, useRef} from "react";
 
 import {Button, TextField} from "@mui/material";
 
@@ -9,6 +9,7 @@ const Search = ({searchCityAPIHandler}) => {
 
     const searchFormHandler = (e) => {
         e.preventDefault()
+        console.log({cityInputRef})
         searchCityAPIHandler(cityInputRef.current.value)
     }
 
