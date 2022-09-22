@@ -11,7 +11,7 @@ if (ENVIRONMENT_TYPE === "dev") {
 
 const createAxiosClient = () => {
 
-
+    console.log({BASE_URL})
     return axios.create({baseURL: BASE_URL})
 }
 
