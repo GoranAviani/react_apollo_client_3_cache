@@ -1,10 +1,10 @@
 import axios from "axios";
 
-const WEATHER_MICROSERVICE = "https://weather.deta.dev"
-const LOCAL_MICROWERVICE = "http://127.0.0.1:8000/"
 
 const createAxiosClient = () => {
-    return axios.create({baseURL: WEATHER_MICROSERVICE})
+    const REACT_APP_ENVIRONMENT_TYPE = process.env.REACT_APP_ENVIRONMENT_TYPE
+    let BASE_URL = (REACT_APP_ENVIRONMENT_TYPE === "dev") ? "http://127.0.0.1:8000/" : "https://weather.deta.dev"
+    return axios.create({baseURL: BASE_URL})
 }
 
 export default createAxiosClient;
