@@ -5,7 +5,6 @@ import {Button, TextField} from "@mui/material";
 import './Search.css'
 
 const Search = ({searchCityAPIHandler}) => {
-    const [cityName, setCityName] = useState("")
     const cityInputRef = useRef();
 
     const searchFormHandler = (e) => {
