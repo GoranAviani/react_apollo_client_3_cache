@@ -3,17 +3,18 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Row from "./Row";
 import Grid from '@mui/material/Grid'; // Grid version 1
+
 import {Draggable} from 'react-beautiful-dnd';
 
 
-const Column = ({key, column, tasks}) => {
+const Column = ({key, index, column, tasks}) => {
     console.log({tasks})
     return (
-        <Draggable draggableId="aaa">
+        <Draggable draggableId={`${column.title}`} index={index}>
             {(provided) => (
-                <Grid xs={4} {...provided.draggableProps}
+                <Grid item xs={4} ref={provided.innerRef}
                       {...provided.draggableProps}
-                      ref={provided.ref}>
+                      {...provided.dragHandleProps}>
 
                     <Typography align='center' variant="h6">
                         {column.title}
