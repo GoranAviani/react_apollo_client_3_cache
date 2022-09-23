@@ -2,20 +2,22 @@ import React from 'react';
 import {Draggable} from 'react-beautiful-dnd';
 
 
-export default class Task extends React.Component {
-    render() {
-        return (
-            <Draggable draggableId={this.props.task.id} index={this.props.index}>
-                {provided => (
-                    <div
-                        ref={provided.innerRef}
-                        {...provided.draggableProps}
-                        {...provided.dragHandleProps}
-                    >
-                        {this.props.task.content}
-                    </div>
-                )}
-            </Draggable>
-        );
-    }
+const Task = ({task, index}) => {
+
+    return (
+        <Draggable draggableId={task.id} index={index}>
+            {provided => (
+                <div
+                    ref={provided.innerRef}
+                    {...provided.draggableProps}
+                    {...provided.dragHandleProps}
+                >
+                    {task.content}
+                </div>
+            )}
+        </Draggable>
+    );
+
 }
+
+export default Task
