@@ -27,8 +27,6 @@ const Dashboard = () => {
                         }))}
 
                 </Droppable>
-
-
             </DragDropContext>
 
 
