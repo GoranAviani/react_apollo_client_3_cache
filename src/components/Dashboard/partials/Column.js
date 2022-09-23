@@ -1,39 +1,29 @@
-import React from 'react'
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Row from "./Row";
-import Grid from '@mui/material/Grid'; // Grid version 1
-
-import {Draggable} from 'react-beautiful-dnd';
+import React from 'react';
+import {Droppable} from 'react-beautiful-dnd';
+import Task from './Row';
 
 
-const Column = ({key, index, column, tasks}) => {
-    console.log({tasks})
+const Column = ({key, column, tasks}) => {
+
     return (
-        <Draggable draggableId={`${column.title}`} index={index}>
-            {(provided) => (
-                <Grid item xs={4} ref={provided.innerRef}
-                      {...provided.draggableProps}
-                      {...provided.dragHandleProps}>
+        <div>
+            {column.title}
+            <Droppable droppableId={column.id}>
+                {provided =>
+                    <div
+                        ref={provided.innerRef}
+                        {...provided.droppableProps}
+                    >
+                        {tasks.map((task, index) => (
+                            <Task key={task.id} task={task} index={index}/>
+                        ))}
+                        {provided.placeholder}
+                    </div>
+                }
+            </Droppable>
+        </div>
+    );
 
-                    <Typography align='center' variant="h6">
-                        {column.title}
-                    </Typography>
-
-
-                    {tasks.map((task, index) => {
-                        return <Row key={task.id} taska={task}/>
-                    })}
-                    {provided.placeholder}
-
-                    }
-
-
-                </Grid>
-            )}</Draggable>
-
-    )
 }
 
-
-export default Column;
+export default Column

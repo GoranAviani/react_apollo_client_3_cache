@@ -1,14 +1,21 @@
-import React from 'react'
-import Typography from "@mui/material/Typography";
-import Box from '@mui/material/Box';
+import React from 'react';
+import {Draggable} from 'react-beautiful-dnd';
 
-const Row = ({key, taska}) => {
-    return (
-        < >
-            {taska.content}
-        </>
-    )
+
+export default class Task extends React.Component {
+    render() {
+        return (
+            <Draggable draggableId={this.props.task.id} index={this.props.index}>
+                {provided => (
+                    <div
+                        ref={provided.innerRef}
+                        {...provided.draggableProps}
+                        {...provided.dragHandleProps}
+                    >
+                        {this.props.task.content}
+                    </div>
+                )}
+            </Draggable>
+        );
+    }
 }
-
-
-export default Row
