@@ -6,7 +6,6 @@ import Row from "./Row";
 const Column = ({key, column, tasks}) => {
     console.log({tasks})
     return (
-
         <Box
             sx={{
                 width: 300,

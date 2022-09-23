@@ -22,7 +22,8 @@ const Dashboard = () => {
                         initialWeatherData.columnOrder.map((columnId) => {
                             const column = initialWeatherData.columns[columnId];
                             const tasks = column.taskIds.map(taskId => initialWeatherData.tasks[taskId]);
-                            return <Column key={column.id} column={column} tasks={tasks}/>;
+                            return <Column {...provided.droppableProps}
+                                           ref={provided.innerRef} key={column.id} column={column} tasks={tasks}/>;
 
                         }))}
 
