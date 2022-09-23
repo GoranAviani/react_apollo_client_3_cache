@@ -9,7 +9,7 @@ import {Draggable} from 'react-beautiful-dnd';
 const Column = ({key, column, tasks}) => {
     console.log({tasks})
     return (
-        <Draggable draggableId={taska.id} index={index}>
+        <Draggable draggableId="aaa">
             {(provided) => (
                 <Grid xs={4} {...provided.draggableProps}
                       {...provided.draggableProps}
@@ -19,14 +19,12 @@ const Column = ({key, column, tasks}) => {
                         {column.title}
                     </Typography>
 
-                    <Item inputRef={provided.ref}
-                          {...provided.droppableProps}>
-                        {tasks.map((task, index) => {
-                            return <Row key={task.id} taska={task} index={index}/>
-                        })}
-                        {provided.placeholder}
 
-                    </Item>
+                    {tasks.map((task, index) => {
+                        return <Row key={task.id} taska={task}/>
+                    })}
+                    {provided.placeholder}
+
                     }
 
 
