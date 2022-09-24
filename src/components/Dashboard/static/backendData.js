@@ -2,11 +2,11 @@ import uuid from "uuid/v4";
 
 
 const backendData = [
-    {id: uuid(), content: "First task"},
-    {id: uuid(), content: "Second task"},
-    {id: uuid(), content: "Third task"},
-    {id: uuid(), content: "Fourth task"},
-    {id: uuid(), content: "Fifth task"}
+    {id: uuid(), cityName: "Stockholm"},
+    {id: uuid(), cityName: "Split"},
+    {id: uuid(), cityName: "London"},
+    {id: uuid(), cityName: "New York"},
+    {id: uuid(), cityName: "Tokyo"}
 ];
 
 
