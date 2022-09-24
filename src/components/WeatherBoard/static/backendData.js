@@ -1,12 +1,10 @@
-import uuid from "uuid/v4";
-
 
 const backendData = [
-    {id: uuid(), cityName: "Stockholm"},
-    {id: uuid(), cityName: "Split"},
-    {id: uuid(), cityName: "London"},
-    {id: uuid(), cityName: "New York"},
-    {id: uuid(), cityName: "Tokyo"}
+    {id: 123, cityName: "Stockholm"},
+    {id: 991239, cityName: "Split"},
+    {id: 'asdada', cityName: "London"},
+    {id: 'adodkasod', cityName: "New York"},
+    {id: '01203kd01', cityName: "Tokyo"}
 ];
 
 
