@@ -28,9 +28,12 @@ const ColumnItem = ({item, index}) => {
                     }}
                 >
                     {item.content}
+                    {provided.placeholder}
+
                 </div>
             )}
         </Draggable>
+
     );
 
 }
