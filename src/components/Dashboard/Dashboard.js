@@ -39,13 +39,13 @@ const Dashboard = () => {
             // dropping to same column
             const column = dbColumns[source.droppableId]; // get column id
             const copiedColumnItems = [...column.items]; // all items
-            const [removed] = copiedColumnItems.splice(source.index, 1); // remove moved the item by its source position id (index)
-            copiedItems.splice(destination.index, 0, removed);
-            setColumns({
-                ...columns,
+            const [removedItem] = copiedColumnItems.splice(source.index, 1); // remove moved the item by its source position id (index)
+            copiedColumnItems.splice(destination.index, 0, removedItem); // add the removedItem to the destination position (index)
+            setDbColumns({ // add all columns, then overwrite the affected columns by providing new values for items keysk
+                ...dbColumns,
                 [source.droppableId]: {
                     ...column,
-                    items: copiedItems
+                    items: copiedColumnItems
                 }
             });
         }
