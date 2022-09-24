@@ -1,16 +1,15 @@
-import uuid from "uuid/v4";
 import backendData from "./backendData";
 
 const backendColumns = {
-    [uuid()]: {
+    [1]: {
         name: "1",
         items: backendData
     },
-    [uuid()]: {
+    [2]: {
         name: "2",
         items: []
     },
-    [uuid()]: {
+    [3]: {
         name: "3",
         items: []
     }
