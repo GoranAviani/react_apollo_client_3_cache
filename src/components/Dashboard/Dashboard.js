@@ -9,15 +9,19 @@ const Dashboard = () => {
     const [dbColumns, setDbColumns] = useState(backendColumns)
     const [citiesData, setCitiesData] = useState(backendData)
 
-    const onDragEnd = result => {
-
+    const onDragEnd = (result, columns, setDbColumns) => {
+        console.log({result})
+        console.log({columns})
     }
 
 
     return (
         <div style={{display: "flex", justifyContent: "center", height: "100%"}}>
 
-            <DragDropContext>
+            <DragDropContext
+                onDragEnd={result => onDragEnd(result, dbColumns, setDbColumns)}
+
+            >
                 {Object.entries(dbColumns).map(([columnKey, columnValue], index) => {
 
                     return <Column columnKey={columnKey} columnValue={columnValue} index={index}/>;
