@@ -3,11 +3,18 @@ import {Droppable} from 'react-beautiful-dnd';
 import Task from './Row';
 
 
-const Column = ({key, column, tasks}) => {
+const Column = ({columnKey, columnValue, index}) => {
 
     return (
-        <div>
-            {column.title}
+        <div
+            style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center"
+            }}
+            key={columnKey}
+        >
+            <h2>{column.name}</h2>
             <Droppable droppableId={column.id}>
                 {provided =>
                     <div

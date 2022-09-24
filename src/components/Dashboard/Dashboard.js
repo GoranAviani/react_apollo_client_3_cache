@@ -17,14 +17,10 @@ const Dashboard = () => {
     return (
         <div style={{display: "flex", justifyContent: "center", height: "100%"}}>
 
-            <DragDropContext
+            <DragDropContext>
+                {Object.entries(dbColumns).map(([columnKey, columnValue], index) => {
 
-            >
-                {initialData1.columnOrder.map((columnId) => {
-                    const column = initialData1.columns[columnId];
-                    const tasks = column.taskIds.map(taskId => initialData1.tasks[taskId]);
-
-                    return <Column key={column.id} column={column} tasks={tasks}/>;
+                    return <Column columnKey={columnKey} columnValue={columnValue} index={index}/>;
                 })}
             </DragDropContext>
         </div>
