@@ -27,7 +27,7 @@ const ColumnItem = ({item, index}) => {
                         ...provided.draggableProps.style
                     }}
                 >
-                    {item.content}
+                    {item.cityName}
                     {provided.placeholder}
                 </div>
             )}
