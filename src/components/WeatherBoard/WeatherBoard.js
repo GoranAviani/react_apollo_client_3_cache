@@ -4,9 +4,7 @@ import {DragDropContext} from 'react-beautiful-dnd';
 import onDragEnd from "./partials/onDragEnd";
 
 import backendColumns from "./static/backendColumns";
-
 import Column from "./partials/Column";
-
 
 const WeatherBoard = () => {
     const [dbColumns, setDbColumns] = useState(backendColumns)
