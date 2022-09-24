@@ -3,15 +3,15 @@ import backendData from "./backendData";
 
 const backendColumns = {
     [uuid()]: {
-        name: "Requested",
+        name: "1",
         items: backendData
     },
     [uuid()]: {
-        name: "To do",
+        name: "2",
         items: []
     },
     [uuid()]: {
-        name: "In Progress",
+        name: "3",
         items: []
     }
 };
