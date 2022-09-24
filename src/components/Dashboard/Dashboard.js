@@ -7,7 +7,6 @@ import {DragDropContext} from 'react-beautiful-dnd';
 
 const Dashboard = () => {
     const [dbColumns, setDbColumns] = useState(backendColumns)
-    const [citiesData, setCitiesData] = useState(backendData)
 
     const onDragEnd = (result, columns, setDbColumns) => {
         console.log({result})
