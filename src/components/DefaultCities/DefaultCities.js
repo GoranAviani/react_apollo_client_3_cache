@@ -1,6 +1,5 @@
 import React from "react";
 import './DefaultCities.css'
-import {Button} from "@mui/material";
 import WeatherBoard from "../WeatherBoard/WeatherBoard";
 
 const DefaultCities = () => {
@@ -9,8 +8,6 @@ const DefaultCities = () => {
     return (
         <div className="defaultCities">
             <WeatherBoard/>
-
-
         </div>
     )
 }
