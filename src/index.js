@@ -13,17 +13,14 @@ import RegistrationForm from "./components/LoginRegister/RegistrationForm";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <React.StrictMode>
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<IndexPage/>}/>
-                <Route path="/dashboard" element={<Dashboard/>}/>
-                <Route path="/login" element={<LoginForm/>}/>
-                <Route path="/registration" element={<RegistrationForm/>}/>
-
-            </Routes>
-        </BrowserRouter>
-    </React.StrictMode>
+    <BrowserRouter>
+        <Routes>
+            <Route path="/" element={<IndexPage/>}/>
+            <Route path="/dashboard" element={<Dashboard/>}/>
+            <Route path="/login" element={<LoginForm/>}/>
+            <Route path="/registration" element={<RegistrationForm/>}/>
+        </Routes>
+    </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function
