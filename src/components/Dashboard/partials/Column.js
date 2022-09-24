@@ -32,9 +32,11 @@ const Column = ({columnKey, columnValue, index}) => {
                             }}
                         >
                             {columnValue.items.map((item, index = {index}) => {
-                                return <ColumnItem item={item}/>
+                                console.log({index})
+                                return <ColumnItem item={item} index={index}/>
 
                             })}
+
                         </div>
                     }
                 </Droppable>
