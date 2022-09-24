@@ -1,6 +1,5 @@
 import Column from "./partials/Column";
 import React from 'react'
-import backendData from "./static/backendData";
 import backendColumns from "./static/backendColumns";
 import {useState} from "react";
 import {DragDropContext} from 'react-beautiful-dnd';
