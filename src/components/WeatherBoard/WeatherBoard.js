@@ -8,7 +8,6 @@ import onDragEnd from "./partials/onDragEnd";
 const WeatherBoard = () => {
     const [dbColumns, setDbColumns] = useState(backendColumns)
 
-
     return (
         <div style={{display: "flex", justifyContent: "center", height: "100%"}}>
 
