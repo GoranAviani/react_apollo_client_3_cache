@@ -35,6 +35,19 @@ const Dashboard = () => {
                     items: destinationColumnItems
                 }
             });
+        } else {
+            // dropping to same column
+            const column = dbColumns[source.droppableId]; // get column id
+            const copiedColumnItems = [...column.items]; // all items
+            const [removed] = copiedColumnItems.splice(source.index, 1); // remove moved the item by its source position id (index)
+            copiedItems.splice(destination.index, 0, removed);
+            setColumns({
+                ...columns,
+                [source.droppableId]: {
+                    ...column,
+                    items: copiedItems
+                }
+            });
         }
 
 
