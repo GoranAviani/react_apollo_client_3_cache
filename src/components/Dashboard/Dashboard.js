@@ -20,8 +20,9 @@ const Dashboard = () => {
             const destinationColumn = dbColumns[destination.droppableId];
             const startingColumnItems = [...startingColumn.items];
             const destinationColumnItems = [...destinationColumn.items];
-            const [removed] = startingColumnItems.splice(source.index, 1);
-            destinationColumnItems.splice(destination.index, 0, removed);
+
+            const [removed] = startingColumnItems.splice(source.index, 1); // delete item by getting his id
+            destinationColumnItems.splice(destination.index, 0, removed); // add the moved/deleted item on position index id (0,1,2,3...) destination.index
             setDbColumns({
                 ...dbColumns,
                 [source.droppableId]: {
