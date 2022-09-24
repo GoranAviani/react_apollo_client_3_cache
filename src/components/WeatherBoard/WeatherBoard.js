@@ -13,7 +13,6 @@ const WeatherBoard = () => {
 
             <DragDropContext
                 onDragEnd={result => onDragEnd(result, dbColumns, setDbColumns)}
-
             >
                 {Object.entries(dbColumns).map(([columnKey, columnValue], index) => {
 
