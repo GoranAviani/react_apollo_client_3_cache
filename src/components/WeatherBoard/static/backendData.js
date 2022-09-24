@@ -6,5 +6,4 @@ const backendData = [
     {id: '01203kd01', cityName: "Tokyo"}
 ];
 
-
 export default backendData;
