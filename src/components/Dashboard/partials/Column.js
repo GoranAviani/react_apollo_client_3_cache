@@ -1,6 +1,6 @@
 import React from 'react';
 import {Droppable} from 'react-beautiful-dnd';
-import Task from './Row';
+import ColumnItem from './ColumnItem';
 
 
 const Column = ({columnKey, columnValue, index}) => {
@@ -14,20 +14,32 @@ const Column = ({columnKey, columnValue, index}) => {
             }}
             key={columnKey}
         >
-            <h2>{column.name}</h2>
-            <Droppable droppableId={column.id}>
-                {provided =>
-                    <div
-                        ref={provided.innerRef}
-                        {...provided.droppableProps}
-                    >
-                        {tasks.map((task, index) => (
-                            <Task key={task.id} task={task} index={index}/>
-                        ))}
-                        {provided.placeholder}
-                    </div>
-                }
-            </Droppable>
+            <h2>{columnValue.name}</h2>
+            <div style={{margin: 8}}>
+
+                <Droppable droppableId={columnKey} key={columnKey}>
+                    {(provided, snapshot) =>
+                        <div
+                            {...provided.droppableProps}
+                            ref={provided.innerRef}
+                            style={{
+                                background: snapshot.isDraggingOver
+                                    ? "lightblue"
+                                    : "lightgrey",
+                                padding: 4,
+                                width: 250,
+                                minHeight: 500
+                            }}
+                        >
+                            {columnValue.items.map((item, index = {index}) => {
+                                return <ColumnItem item={item}/>
+
+                            })}
+                        </div>
+                    }
+                </Droppable>
+            </div>
+
         </div>
     );
 
