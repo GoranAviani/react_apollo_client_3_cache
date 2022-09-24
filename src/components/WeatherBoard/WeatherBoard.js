@@ -4,7 +4,7 @@ import backendColumns from "./static/backendColumns";
 import {useState} from "react";
 import {DragDropContext} from 'react-beautiful-dnd';
 
-const Dashboard = () => {
+const WeatherBoard = () => {
     const [dbColumns, setDbColumns] = useState(backendColumns)
 
     const onDragEnd = (result, dbColumns, setDbColumns) => {
@@ -72,4 +72,4 @@ const Dashboard = () => {
 
 }
 
-export default Dashboard;
+export default WeatherBoard;
