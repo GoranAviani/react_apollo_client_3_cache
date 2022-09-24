@@ -14,7 +14,7 @@ const Dashboard = () => {
         console.log({source})
         console.log({destination})
 
-        // checking if droppable id done belong to same column
+        // Check if source and destination objects dont belong to same column
         if (source.droppableId !== destination.droppableId) {
             const startingColumn = dbColumns[source.droppableId];
             const destinationColumn = dbColumns[destination.droppableId];
