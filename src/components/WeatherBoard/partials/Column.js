@@ -17,7 +17,6 @@ const Column = ({columnKey, columnValue, index}) => {
                          ref={provided.innerRef}
                     >
                         {columnValue.items.map((item, index = {index}) => {
-                            console.log({index})
                             return <ColumnItem item={item} index={index}/>
                         })}
                         {provided.placeholder}
