@@ -15,9 +15,9 @@ const Column = ({columnKey, columnValue, index}) => {
 
                 <Droppable droppableId={columnKey} key={columnKey}>
                     {(provided, snapshot) =>
-                        <div className="column"
-                             {...provided.droppableProps}
-                             ref={provided.innerRef}
+                        <div
+                            {...provided.droppableProps}
+                            ref={provided.innerRef}
                         >
                             {columnValue.items.map((item, index = {index}) => {
                                 console.log({index})
