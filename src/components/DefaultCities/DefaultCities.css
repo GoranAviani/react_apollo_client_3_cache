@@ -1,12 +1,11 @@
 .defaultCities {
-    height: 71vh;
+    height: 68vh;
     margin-top: 1vh;
     border: 2px solid red;
 }
 
 @media screen and (max-width: 600px) {
     .defaultCities {
-        margin-top: 4vh;
         height: 970px;
     }
 }
