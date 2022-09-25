@@ -1,0 +1,20 @@
+.columnItem {
+    user-select: none;
+    padding: 16px;
+    margin: 0 0 8px 0;
+    height: 150px;
+}
+
+[data-dragging="true"] {
+    background: red
+}
+
+[data-dragging="false"] {
+    background: #456C86
+}
+
+@media screen and (max-width: 600px) {
+    .columnItem {
+        height: 120px;
+    }
+}

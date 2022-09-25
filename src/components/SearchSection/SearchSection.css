@@ -1,6 +1,4 @@
-.navigation {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: space-between;
-    height: 8vh;
+.searchSection {
+    height: 7vh;
+    border: 1px solid red;
 }

@@ -1,50 +1,30 @@
 import React from 'react';
 import {Droppable} from 'react-beautiful-dnd';
 import ColumnItem from './ColumnItem';
+import '../css/Column.css'
 
 
 const Column = ({columnKey, columnValue, index}) => {
-
+//             <h2>{columnValue.name}</h2>
     return (
-        <div
-            style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center"
-            }}
-            key={columnKey}
+        <div className="column"
+             key={columnKey}
         >
-            <h2>{columnValue.name}</h2>
-            <div style={{margin: 8}}>
-
-                <Droppable droppableId={columnKey} key={columnKey}>
-                    {(provided, snapshot) =>
-                        <div
-                            {...provided.droppableProps}
-                            ref={provided.innerRef}
-                            style={{
-                                background: snapshot.isDraggingOver
-                                    ? "lightblue"
-                                    : "lightgrey",
-                                padding: 4,
-                                width: 250,
-                                minHeight: 500
-                            }}
-                        >
-                            {columnValue.items.map((item, index = {index}) => {
-                                console.log({index})
-                                return <ColumnItem item={item} index={index}/>
-
-                            })}
-
-                        </div>
-                    }
-                </Droppable>
-            </div>
-
+            <Droppable key={columnKey} droppableId={columnKey}>
+                {(provided, snapshot) =>
+                    <div style={{height: '100%'}}
+                         {...provided.droppableProps}
+                         ref={provided.innerRef}
+                    >
+                        {columnValue.items.map((item, index = {index}) => {
+                            return <ColumnItem item={item} index={index}/>
+                        })}
+                        {provided.placeholder}
+                    </div>
+                }
+            </Droppable>
         </div>
     );
-
 }
 
 export default Column

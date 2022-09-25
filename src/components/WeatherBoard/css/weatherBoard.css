@@ -1,16 +1,12 @@
-.search {
+.weatherBoard {
     display: flex;
-    flex-direction: row;
-    flex-grow: 1;
+    background: green;
+    overflow: hidden;
+    height: 100%;
 }
-
-.search > div {
-    flex: 1;
-}
-
 
 @media screen and (max-width: 600px) {
-    .search {
+    .weatherBoard {
         flex-direction: column;
     }
 }

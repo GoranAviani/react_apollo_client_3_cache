@@ -1,3 +1,6 @@
+import onDragEndBoardCicrularLogic from "./onDragEndBoardCicrularLogic";
+import useWindowDimensions from "../../../hooks/window/useWindowDimensions";
+
 const onDragEnd = (result, dbColumns, setDbColumns) => {
 
     if (!result.destination) return;
@@ -9,6 +12,7 @@ const onDragEnd = (result, dbColumns, setDbColumns) => {
         const destinationColumn = dbColumns[destination.droppableId];
         const startingColumnItems = [...startingColumn.items];
         const destinationColumnItems = [...destinationColumn.items];
+
 
         const [removed] = startingColumnItems.splice(source.index, 1); // delete item by getting his id
         destinationColumnItems.splice(destination.index, 0, removed); // add the moved/deleted item on position index id (0,1,2,3...) destination.index
@@ -24,6 +28,9 @@ const onDragEnd = (result, dbColumns, setDbColumns) => {
                 items: destinationColumnItems
             }
         });
+        if (destinationColumnItems.length > 3) {
+            onDragEndBoardCicrularLogic(source, destination, startingColumn, destinationColumn, destinationColumnItems, startingColumnItems, dbColumns, setDbColumns)
+        }
     } else {
         // dropping to same column
         const column = dbColumns[source.droppableId]; // get column id
