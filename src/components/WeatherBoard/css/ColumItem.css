@@ -13,4 +13,8 @@
     background: #456C86
 }
 
-
+@media screen and (max-width: 600px) {
+    .columnItem {
+        height: 120px;
+    }
+}
