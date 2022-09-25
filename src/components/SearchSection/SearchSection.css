@@ -2,3 +2,9 @@
     height: 7vh;
     border: 1px solid red;
 }
+
+@media screen and (max-width: 600px) {
+    .searchSection {
+        height: 15vh;
+    }
+}
