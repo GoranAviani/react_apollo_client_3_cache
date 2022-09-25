@@ -10,5 +10,6 @@
     .defaultCities {
         margin-top: 4vh;
         height: 80vh;
+        overflow: scroll;
     }
 }
