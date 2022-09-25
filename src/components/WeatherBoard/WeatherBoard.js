@@ -12,12 +12,10 @@ const WeatherBoard = () => {
 
     return (
         <div className="weatherBoard">
-
             <DragDropContext
                 onDragEnd={result => onDragEnd(result, dbColumns, setDbColumns)}
             >
                 {Object.entries(dbColumns).map(([columnKey, columnValue], index) => {
-
                     return <Column key={columnKey} columnKey={columnKey} columnValue={columnValue} index={index}/>;
                 })}
             </DragDropContext>
