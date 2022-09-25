@@ -21,7 +21,7 @@ const Column = ({columnKey, columnValue, index}) => {
                             return <ColumnItem item={item} index={index}/>
 
                         })}
-
+                        {provided.placeholder}
                     </div>
                 }
             </Droppable>
