@@ -10,7 +10,7 @@ const Column = ({columnKey, columnValue, index}) => {
         <div className="column"
              key={columnKey}
         >
-            <Droppable droppableId={columnKey} key={columnKey}>
+            <Droppable key={columnKey} droppableId={columnKey}>
                 {(provided, snapshot) =>
                     <div style={{height: '100%'}}
                          {...provided.droppableProps}

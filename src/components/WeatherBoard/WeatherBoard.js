@@ -18,7 +18,7 @@ const WeatherBoard = () => {
             >
                 {Object.entries(dbColumns).map(([columnKey, columnValue], index) => {
 
-                    return <Column columnKey={columnKey} columnValue={columnValue} index={index}/>;
+                    return <Column key={columnKey} columnKey={columnKey} columnValue={columnValue} index={index}/>;
                 })}
             </DragDropContext>
         </div>
