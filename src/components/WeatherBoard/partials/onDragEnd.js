@@ -1,4 +1,5 @@
 import onDragEndBoardCicrularLogic from "./onDragEndBoardCicrularLogic";
+import useWindowDimensions from "../../../hooks/window/useWindowDimensions";
 
 const onDragEnd = (result, dbColumns, setDbColumns) => {
 
