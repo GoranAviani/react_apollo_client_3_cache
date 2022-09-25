@@ -1,5 +1,14 @@
 .loader {
     display: flex;
     align-items: center;
-    
+    justify-content: center;
+    height: 71vh;
+    margin-top: 1vh;
+}
+
+@media screen and (max-width: 600px) {
+    .loader {
+        margin-top: 4vh;
+        height: 970px;
+    }
 }
