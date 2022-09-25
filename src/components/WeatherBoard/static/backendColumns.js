@@ -1,4 +1,5 @@
 import backendData from "./backendData";
+import backendData1 from "./backendData1";
 
 const backendColumns = {
     1: {
@@ -7,7 +8,7 @@ const backendColumns = {
     },
     2: {
         name: "2",
-        items: []
+        items: backendData1
     }
 };
 
