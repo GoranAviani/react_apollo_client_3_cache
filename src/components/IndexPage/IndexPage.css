@@ -1,6 +1,6 @@
 .indexPage {
     display: grid;
-    background: aqua;
+    background: yellow;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-gap: 2vh;
     height: 100vh;
