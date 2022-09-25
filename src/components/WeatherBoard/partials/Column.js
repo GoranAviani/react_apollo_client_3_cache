@@ -7,13 +7,8 @@ import '../css/Column.css'
 const Column = ({columnKey, columnValue, index}) => {
 
     return (
-        <div
-            style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center"
-            }}
-            key={columnKey}
+        <div className="column"
+             key={columnKey}
         >
             <h2>{columnValue.name}</h2>
             <div style={{margin: 8}}>
