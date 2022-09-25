@@ -24,10 +24,8 @@ const Column = ({columnKey, columnValue, index}) => {
                     </div>
                 }
             </Droppable>
-
         </div>
     );
-
 }
 
 export default Column
