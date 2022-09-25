@@ -15,7 +15,7 @@ const Search = ({searchCityAPIHandler}) => {
     return (
         <form onSubmit={searchFormHandler} className="search">
             <TextField id="filled-basic" label="Search" variant="outlined" inputRef={cityInputRef}/>
-            <Button type="submit" variant="contained">Search</Button>
+            <Button size="large" type="submit" variant="contained">Search</Button>
         </form>
     )
 }
