@@ -19,7 +19,6 @@ const Column = ({columnKey, columnValue, index}) => {
                         {columnValue.items.map((item, index = {index}) => {
                             console.log({index})
                             return <ColumnItem item={item} index={index}/>
-
                         })}
                         {provided.placeholder}
                     </div>
