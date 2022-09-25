@@ -1,9 +1,7 @@
 .defaultCities {
     height: 71vh;
     margin-top: 1vh;
-
     border: 2px solid red;
-
 }
 
 @media screen and (max-width: 600px) {
