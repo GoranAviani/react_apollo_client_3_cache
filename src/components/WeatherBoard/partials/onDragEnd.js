@@ -1,3 +1,5 @@
+import onDragEndBoardCicrularLogic from "./onDragEndBoardCicrularLogic";
+
 const onDragEnd = (result, dbColumns, setDbColumns) => {
 
     if (!result.destination) return;
@@ -25,27 +27,9 @@ const onDragEnd = (result, dbColumns, setDbColumns) => {
                 items: destinationColumnItems
             }
         });
-
-
         if (destinationColumnItems.length > 3) {
-            const lastElemenDestinationColumn = destinationColumnItems.pop()
-            console.log({lastElemenDestinationColumn})
-            startingColumnItems.push(lastElemenDestinationColumn)
+            onDragEndBoardCicrularLogic(source, destination, startingColumn, destinationColumn, destinationColumnItems, startingColumnItems, dbColumns, setDbColumns)
         }
-
-
-        setDbColumns({
-            ...dbColumns,
-            [source.droppableId]: {
-                ...startingColumn,
-                items: startingColumnItems
-            },
-            [destination.droppableId]: {
-                ...destinationColumn,
-                items: destinationColumnItems
-            }
-        });
-
     } else {
         // dropping to same column
         const column = dbColumns[source.droppableId]; // get column id
