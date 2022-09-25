@@ -8,10 +8,6 @@ const backendColumns = {
     2: {
         name: "2",
         items: []
-    },
-    3: {
-        name: "3",
-        items: []
     }
 };
 
