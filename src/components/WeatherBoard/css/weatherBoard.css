@@ -1,6 +1,7 @@
 .weatherBoard {
     display: flex;
     background: green;
+    overflow: hidden;
     height: 100%;
 }
 
