@@ -27,8 +27,6 @@ const Column = ({columnKey, columnValue, index}) => {
                                     ? "lightblue"
                                     : "lightgrey",
                                 padding: 4,
-                                width: 250,
-                                minHeight: 500
                             }}
                         >
                             {columnValue.items.map((item, index = {index}) => {

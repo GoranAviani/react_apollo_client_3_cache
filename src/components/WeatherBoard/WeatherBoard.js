@@ -10,7 +10,7 @@ const WeatherBoard = () => {
     const [dbColumns, setDbColumns] = useState(backendColumns)
 
     return (
-        <div style={{display: "flex", justifyContent: "center", height: "100%"}}>
+        <div style={{display: "flex", justifyContent: "center"}}>
 
             <DragDropContext
                 onDragEnd={result => onDragEnd(result, dbColumns, setDbColumns)}
