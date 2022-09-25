@@ -5,13 +5,11 @@ import '../css/Column.css'
 
 
 const Column = ({columnKey, columnValue, index}) => {
-
+//             <h2>{columnValue.name}</h2>
     return (
         <div className="column"
              key={columnKey}
         >
-            <h2>{columnValue.name}</h2>
-
             <Droppable droppableId={columnKey} key={columnKey}>
                 {(provided, snapshot) =>
                     <div style={{height: '100%'}}

@@ -1,0 +1,17 @@
+.columnItem {
+    user-select: none;
+    padding: 16px;
+    margin: 0 0 8px 0;
+    min-height: 250px;
+
+}
+
+[data-dragging="true"] {
+    background: red
+}
+
+[data-dragging="false"] {
+    background: #456C86
+}
+
+
