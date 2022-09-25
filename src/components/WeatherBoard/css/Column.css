@@ -5,5 +5,7 @@
     flex-shrink: 1;
     flex-basis: 0;
     margin: 4px;
-    background: azure;
+    height: 100%;
+    background: darkgrey;
+
 }
