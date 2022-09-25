@@ -1,0 +1,7 @@
+.weatherBoard {
+    display: flex;
+    background: green;
+    height: 100%;
+    width: 100%;
+
+}

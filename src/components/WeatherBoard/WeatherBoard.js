@@ -5,12 +5,13 @@ import onDragEnd from "./partials/onDragEnd";
 
 import backendColumns from "./static/backendColumns";
 import Column from "./partials/Column";
+import './css/weatherBoard.css'
 
 const WeatherBoard = () => {
     const [dbColumns, setDbColumns] = useState(backendColumns)
 
     return (
-        <div style={{display: "flex", justifyContent: "center"}}>
+        <div className="weatherBoard">
 
             <DragDropContext
                 onDragEnd={result => onDragEnd(result, dbColumns, setDbColumns)}
