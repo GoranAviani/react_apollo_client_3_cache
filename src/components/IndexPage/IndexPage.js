@@ -11,6 +11,7 @@ import {useSearchCityAPI} from "../../hooks/api/useSearchCityAPI";
 
 import './IndexPage.css'
 import '../../css/GlobalContainer.css'
+import useWindowDimensions from "../../hooks/window/useWindowDimensions";
 
 
 const IndexPage = () => {
@@ -23,6 +24,7 @@ const IndexPage = () => {
         /* check input */
         useSearchCityAPI(accessKey, setAccessKey, cityName, setSearchedCityDetails, setIsLoading)
     }
+    const windowDimension = useWindowDimensions()
 
     return (
         <div className="globalContainer">
@@ -32,7 +34,7 @@ const IndexPage = () => {
                 <SearchSection searchCityAPIHandler={searchCityAPIHandler}/>
                 {isLoading ? <Loader/> : searchedCityDetails ?
                     <ResultSearchedCity searchedCityDetails={searchedCityDetails}/> :
-                    <DefaultCities/>}
+                    <DefaultCities windowDimension = {windowDimension}/>}
                 <Footer/>
             </div>
         </div>
