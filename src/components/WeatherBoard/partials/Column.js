@@ -1,6 +1,7 @@
 import React from 'react';
 import {Droppable} from 'react-beautiful-dnd';
 import ColumnItem from './ColumnItem';
+import '../css/Column.css'
 
 
 const Column = ({columnKey, columnValue, index}) => {
@@ -19,15 +20,9 @@ const Column = ({columnKey, columnValue, index}) => {
 
                 <Droppable droppableId={columnKey} key={columnKey}>
                     {(provided, snapshot) =>
-                        <div
-                            {...provided.droppableProps}
-                            ref={provided.innerRef}
-                            style={{
-                                background: snapshot.isDraggingOver
-                                    ? "lightblue"
-                                    : "lightgrey",
-                                padding: 4,
-                            }}
+                        <div className="column"
+                             {...provided.droppableProps}
+                             ref={provided.innerRef}
                         >
                             {columnValue.items.map((item, index = {index}) => {
                                 console.log({index})
