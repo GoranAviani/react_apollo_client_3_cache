@@ -10,10 +10,6 @@ const onDragEnd = (result, dbColumns, setDbColumns) => {
         const startingColumnItems = [...startingColumn.items];
         const destinationColumnItems = [...destinationColumn.items];
 
-        if (destinationColumnItems.length > 2) {
-            console.log({destinationColumnItems})
-            console.log({startingColumnItems})
-        }
 
         const [removed] = startingColumnItems.splice(source.index, 1); // delete item by getting his id
         destinationColumnItems.splice(destination.index, 0, removed); // add the moved/deleted item on position index id (0,1,2,3...) destination.index
@@ -29,6 +25,27 @@ const onDragEnd = (result, dbColumns, setDbColumns) => {
                 items: destinationColumnItems
             }
         });
+
+
+        if (destinationColumnItems.length > 3) {
+            const lastElemenDestinationColumn = destinationColumnItems.pop()
+            console.log({lastElemenDestinationColumn})
+            startingColumnItems.push(lastElemenDestinationColumn)
+        }
+
+
+        setDbColumns({
+            ...dbColumns,
+            [source.droppableId]: {
+                ...startingColumn,
+                items: startingColumnItems
+            },
+            [destination.droppableId]: {
+                ...destinationColumn,
+                items: destinationColumnItems
+            }
+        });
+
     } else {
         // dropping to same column
         const column = dbColumns[source.droppableId]; // get column id
