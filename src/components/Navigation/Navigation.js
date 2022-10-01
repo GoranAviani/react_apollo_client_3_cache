@@ -19,7 +19,7 @@ const Navigation = ({setSearchedCityDetails}) => {
             }}
             >Index
             </Button>
-            Wip - playgropund
+            Wip - playground
 
             <LoginRegister/>
 
