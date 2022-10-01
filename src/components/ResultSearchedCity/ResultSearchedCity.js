@@ -23,13 +23,12 @@ const ResultSearchedCity = ({searchedCityDetails}) => {
                         <Card>
                             <CardMedia className="currentWeatherIcon"
                                        component="img"
-                                       height="150px"
                                        image={searchedCityDetails.data.current.condition.icon}
                                        alt={searchedCityDetails.data.current.condition.text}
                             />
                             <CardContent>
-                                <Typography gutterBottom variant="h5" component="div">
-                                    Lizard
+                                <Typography gutterBottom variant="h6" component="div">
+                                    {searchedCityDetails.data.current.condition.text}
                                 </Typography>
                             </CardContent>
                         </Card>
