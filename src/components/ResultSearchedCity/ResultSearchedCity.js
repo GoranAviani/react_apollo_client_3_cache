@@ -38,9 +38,20 @@ const ResultSearchedCity = ({searchedCityDetails}) => {
                 </div>
                 <div className="searchedCityOtherDetails">
                     <div className="currentTemperature">
-                        <div className="currentTemperatureTitle">Temperature</div>
-                        <div className="currentTemperatureNumber">{searchedCityDetails.data.current.temp_c} </div>
-                        <div className="currentTemperatureNumber">{searchedCityDetails.data.current.feelslike_c} </div>
+
+                        <Typography align='center' gutterBottom variant="h1" component="div">
+                            {searchedCityDetails.data.current.temp_c}
+                        </Typography>
+                        <Typography align='center' gutterBottom variant="" component="div">
+                            Now
+                        </Typography>
+                        <Typography align='center' gutterBottom variant="h1" component="div">
+                            {searchedCityDetails.data.current.feelslike_c}
+                        </Typography>
+                        <Typography align='center' gutterBottom variant="" component="div">
+                            Feels like
+                        </Typography>
+
 
                     </div>
                     <div>
