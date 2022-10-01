@@ -1,7 +1,7 @@
 .navigation {
     display: flex;
     justify-content: space-between;
-    height: 10vh;
+    height: 9vh;
     border: 1px solid red;
 }
 
