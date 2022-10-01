@@ -8,4 +8,8 @@
     }
 }
 
-/* here could be height*/
+.globalCitiesContainer {
+    height: 68vh;
+    padding-bottom: 2vh;
+}
+

@@ -32,9 +32,11 @@ const IndexPage = () => {
             <div className="indexPage">
                 <Navigation setSearchedCityDetails={setSearchedCityDetails}/>
                 <SearchSection searchCityAPIHandler={searchCityAPIHandler}/>
-                {isLoading ? <Loader/> : searchedCityDetails ?
-                    <ResultSearchedCity searchedCityDetails={searchedCityDetails}/> :
-                    <DefaultCities windowDimension = {windowDimension}/>}
+                <div className="globalCitiesContainer">
+                    {isLoading ? <Loader/> : searchedCityDetails ?
+                        <ResultSearchedCity searchedCityDetails={searchedCityDetails}/> :
+                        <DefaultCities windowDimension={windowDimension}/>}
+                </div>
                 <Footer/>
             </div>
         </div>
