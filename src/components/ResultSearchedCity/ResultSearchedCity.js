@@ -25,9 +25,8 @@ const ResultSearchedCity = ({searchedCityDetails}) => {
                     <Card>
                         <CardMedia
                             component="img"
-                            height="150"
                             image={searchedCityDetails.data.current.condition.icon}
-                            alt="Paella dish"
+                            alt={searchedCityDetails.data.current.condition.text}
                         />
                     </Card>
                 </div>
