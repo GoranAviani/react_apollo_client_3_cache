@@ -1,5 +1,4 @@
 import React from "react";
-import Paper from '@mui/material/Paper';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 
