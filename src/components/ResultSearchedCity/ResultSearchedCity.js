@@ -1,6 +1,8 @@
 import React from "react";
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
+import CardContent from '@mui/material/CardContent';
+
 import Typography from '@mui/material/Typography';
 
 import './ResultSearchedCity.css'
@@ -17,13 +19,18 @@ const ResultSearchedCity = ({searchedCityDetails}) => {
             </div>
             <div className="searchedCityAllDetails">
                 <div className="searchedCityMainDetails">
-                    <div className="currentWeatherIcon">
+                    <div>
                         <Card>
-                            <CardMedia
-                                component="img"
-                                image={searchedCityDetails.data.current.condition.icon}
-                                alt={searchedCityDetails.data.current.condition.text}
+                            <CardMedia className="currentWeatherIcon"
+                                       component="img"
+                                       image={searchedCityDetails.data.current.condition.icon}
+                                       alt={searchedCityDetails.data.current.condition.text}
                             />
+                            <CardContent>
+                                <Typography align='center' gutterBottom variant="h6" component="div">
+                                    {searchedCityDetails.data.current.condition.text}
+                                </Typography>
+                            </CardContent>
                         </Card>
 
                     </div>
@@ -31,8 +38,21 @@ const ResultSearchedCity = ({searchedCityDetails}) => {
                 </div>
                 <div className="searchedCityOtherDetails">
                     <div className="currentTemperature">
-                        <div className="currentTemperatureTitle">Temperature</div>
-                        <div className="currentTemperatureNumber">{} </div>
+
+                        <Typography align='center' gutterBottom variant="h1" component="div">
+                            {searchedCityDetails.data.current.temp_c}
+                        </Typography>
+                        <Typography align='center' gutterBottom variant="" component="div">
+                            Now
+                        </Typography>
+                        <Typography align='center' gutterBottom variant="h1" component="div">
+                            {searchedCityDetails.data.current.feelslike_c}
+                        </Typography>
+                        <Typography align='center' gutterBottom variant="" component="div">
+                            Feels like
+                        </Typography>
+
+
                     </div>
                     <div>
                         <div className="lowestTemperatureTitle">Daily lowest</div>
