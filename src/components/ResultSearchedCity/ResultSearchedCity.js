@@ -27,7 +27,7 @@ const ResultSearchedCity = ({searchedCityDetails}) => {
                                        alt={searchedCityDetails.data.current.condition.text}
                             />
                             <CardContent>
-                                <Typography gutterBottom variant="h6" component="div">
+                                <Typography align='center' gutterBottom variant="h6" component="div">
                                     {searchedCityDetails.data.current.condition.text}
                                 </Typography>
                             </CardContent>
