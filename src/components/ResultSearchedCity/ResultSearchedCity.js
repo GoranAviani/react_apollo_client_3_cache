@@ -1,6 +1,7 @@
 import React from "react";
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
 
 import './ResultSearchedCity.css'
 
@@ -11,7 +12,9 @@ const ResultSearchedCity = ({searchedCityDetails}) => {
     console.log(searchedCityDetails.data)
     return (
         <div className="resultSearchedCity">
-            <div className="citsearchedCityInfoName">{searchedCityDetails.data.location.name}
+            <div className="citsearchedCityInfoName">
+                <Typography variant="h5">{searchedCityDetails.data.location.name}</Typography>
+
             </div>
             <div className="searchedCityMainDetails">
                 <div className="currentTemperature">
