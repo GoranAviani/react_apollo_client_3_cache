@@ -13,3 +13,8 @@
     padding-bottom: 2vh;
 }
 
+@media screen and (max-width: 600px) {
+    .globalCitiesContainer {
+        height: 970px;
+    }
+}
