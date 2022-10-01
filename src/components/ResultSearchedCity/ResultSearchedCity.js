@@ -1,4 +1,6 @@
 import React from "react";
+import Paper from '@mui/material/Paper';
+import Card from '@mui/material/Card';
 
 import './ResultSearchedCity.css'
 
@@ -19,6 +21,9 @@ const ResultSearchedCity = ({searchedCityDetails}) => {
                 </div>
                 <div>
                     <div className="currentWeatherIcon">weather Icon</div>
+                    <Card>
+                        <img src={searchedCityDetails.data.current.condition.icon}/>
+                    </Card>
                 </div>
             </div>
             <div className="searchedCityOtherDetails">
