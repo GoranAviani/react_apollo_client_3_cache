@@ -1,6 +1,10 @@
 .resultSearchedCity {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     border: 2px solid black;
     height: 100%;
+}
+
+
+.searchedCityMainDetails {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }

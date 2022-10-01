@@ -12,14 +12,15 @@ const ResultSearchedCity = ({searchedCityDetails}) => {
     console.log(searchedCityDetails.data)
     return (
         <div className="resultSearchedCity">
+            <div className="citsearchedCityInfoName">{searchedCityDetails.data.location.name}
+            </div>
             <div className="searchedCityMainDetails">
                 <div className="currentTemperature">
+
                     <div className="currentTemperatureTitle">Temperature</div>
                     <div className="currentTemperatureNumber">{} </div>
                 </div>
-                <div className="citsearchedCityInfoName">
-                    Name: {searchedCityDetails.data.location.name}
-                </div>
+
                 <div>
                     <div className="currentWeatherIcon">weather Icon</div>
                     <Card>
