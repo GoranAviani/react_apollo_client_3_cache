@@ -7,3 +7,8 @@
         padding: 0 1vh 0 1vh;
     }
 }
+
+.globalCitiesContainer {
+    height: 68vh;
+    padding-bottom: 2vh;
+}
