@@ -7,3 +7,13 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
+
+.currentWeatherIcon {
+    height: 150px;
+}
+
+@media screen and (max-width: 600px) {
+    .navigation {
+        height: 8vh;
+    }
+}

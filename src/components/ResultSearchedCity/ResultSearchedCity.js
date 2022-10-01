@@ -1,6 +1,8 @@
 import React from "react";
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
+import CardContent from '@mui/material/CardContent';
+
 import Typography from '@mui/material/Typography';
 
 import './ResultSearchedCity.css'
@@ -17,13 +19,19 @@ const ResultSearchedCity = ({searchedCityDetails}) => {
             </div>
             <div className="searchedCityAllDetails">
                 <div className="searchedCityMainDetails">
-                    <div className="currentWeatherIcon">
+                    <div>
                         <Card>
-                            <CardMedia
-                                component="img"
-                                image={searchedCityDetails.data.current.condition.icon}
-                                alt={searchedCityDetails.data.current.condition.text}
+                            <CardMedia className="currentWeatherIcon"
+                                       component="img"
+                                       height="150px"
+                                       image={searchedCityDetails.data.current.condition.icon}
+                                       alt={searchedCityDetails.data.current.condition.text}
                             />
+                            <CardContent>
+                                <Typography gutterBottom variant="h5" component="div">
+                                    Lizard
+                                </Typography>
+                            </CardContent>
                         </Card>
 
                     </div>
