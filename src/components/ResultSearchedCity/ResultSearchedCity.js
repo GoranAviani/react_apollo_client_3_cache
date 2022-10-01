@@ -18,17 +18,17 @@ const ResultSearchedCity = ({searchedCityDetails}) => {
             <div className="searchedCityAllDetails">
                 <div className="searchedCityMainDetails">
                     <div>
-                        <div className="currentWeatherIcon">weather Icon
-
+                        <div className="currentWeatherIcon">
+                            <Card>
+                                <CardMedia
+                                    component="img"
+                                    image={searchedCityDetails.data.current.condition.icon}
+                                    alt={searchedCityDetails.data.current.condition.text}
+                                />
+                            </Card>
 
                         </div>
-                        <Card>
-                            <CardMedia
-                                component="img"
-                                image={searchedCityDetails.data.current.condition.icon}
-                                alt={searchedCityDetails.data.current.condition.text}
-                            />
-                        </Card>
+
                     </div>
                     <div className="currentTemperature">
                         <div className="currentTemperatureTitle">Temperature</div>
