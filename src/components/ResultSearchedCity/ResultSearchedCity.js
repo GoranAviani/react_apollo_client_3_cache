@@ -27,12 +27,13 @@ const ResultSearchedCity = ({searchedCityDetails}) => {
                         </Card>
 
                     </div>
+
+                </div>
+                <div className="searchedCityOtherDetails">
                     <div className="currentTemperature">
                         <div className="currentTemperatureTitle">Temperature</div>
                         <div className="currentTemperatureNumber">{} </div>
                     </div>
-                </div>
-                <div className="searchedCityOtherDetails">
                     <div>
                         <div className="lowestTemperatureTitle">Daily lowest</div>
                         <div className="lowestTemperatureNumber">{searchedCityDetails.data.cityName}</div>
