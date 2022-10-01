@@ -1,5 +1,6 @@
 # React Weather is a online weather solution for those that want to have a full westher prognosis experience every day
 
+# Eeact weather stack: react, axios, react-dom
 
 
 # Getting Started with Create React App
