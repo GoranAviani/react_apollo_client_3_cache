@@ -39,7 +39,9 @@ const ResultSearchedCity = ({searchedCityDetails}) => {
                 <div className="searchedCityOtherDetails">
                     <div className="currentTemperature">
                         <div className="currentTemperatureTitle">Temperature</div>
-                        <div className="currentTemperatureNumber">{} </div>
+                        <div className="currentTemperatureNumber">{searchedCityDetails.data.current.temp_c} </div>
+                        <div className="currentTemperatureNumber">{searchedCityDetails.data.current.feelslike_c} </div>
+
                     </div>
                     <div>
                         <div className="lowestTemperatureTitle">Daily lowest</div>
