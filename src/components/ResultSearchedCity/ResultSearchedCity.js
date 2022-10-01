@@ -17,13 +17,7 @@ const ResultSearchedCity = ({searchedCityDetails}) => {
             </div>
             <div className="searchedCityAllDetails">
                 <div className="searchedCityMainDetails">
-                    <div className="currentTemperature">
-                        <div className="currentTemperatureTitle">Temperature</div>
-                        <div className="currentTemperatureNumber">{} </div>
-                    </div>
-
-                    <div>
-                        <div className="currentWeatherIcon">weather Icon</div>
+                    <div className="currentWeatherIcon">
                         <Card>
                             <CardMedia
                                 component="img"
@@ -31,9 +25,15 @@ const ResultSearchedCity = ({searchedCityDetails}) => {
                                 alt={searchedCityDetails.data.current.condition.text}
                             />
                         </Card>
+
                     </div>
+
                 </div>
                 <div className="searchedCityOtherDetails">
+                    <div className="currentTemperature">
+                        <div className="currentTemperatureTitle">Temperature</div>
+                        <div className="currentTemperatureNumber">{} </div>
+                    </div>
                     <div>
                         <div className="lowestTemperatureTitle">Daily lowest</div>
                         <div className="lowestTemperatureNumber">{searchedCityDetails.data.cityName}</div>
