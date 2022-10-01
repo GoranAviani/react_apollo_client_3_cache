@@ -4,6 +4,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 
 import './Loader.css'
 
+// using material components
 const Loader = () => {
     return (
         <div className="loader">
