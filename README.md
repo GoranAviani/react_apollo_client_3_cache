@@ -1,3 +1,7 @@
+React Weather is a online weather solution for those that want to have a full westher prognosis experience every day
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
