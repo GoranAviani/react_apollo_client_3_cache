@@ -1,6 +1,7 @@
 import React from "react";
 import Paper from '@mui/material/Paper';
 import Card from '@mui/material/Card';
+import CardMedia from '@mui/material/CardMedia';
 
 import './ResultSearchedCity.css'
 
@@ -22,7 +23,12 @@ const ResultSearchedCity = ({searchedCityDetails}) => {
                 <div>
                     <div className="currentWeatherIcon">weather Icon</div>
                     <Card>
-                        <img src={searchedCityDetails.data.current.condition.icon}/>
+                        <CardMedia
+                            component="img"
+                            height="150"
+                            image={searchedCityDetails.data.current.condition.icon}
+                            alt="Paella dish"
+                        />
                     </Card>
                 </div>
             </div>
