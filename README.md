@@ -1,3 +1,8 @@
+# React Weather is a online weather solution for those that want to have a full westher prognosis experience every day
+
+# React weather stack: react, axios, react-dom
+
+# plans: whitch to yarn, delpy ccd
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
