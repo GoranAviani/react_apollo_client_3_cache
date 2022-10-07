@@ -39,6 +39,22 @@ const ResultSearchedCity = ({searchedCityDetails}) => {
                             </Typography>
                         </div>
                     </div>
+                    <div className="currentOtherNumerals">
+                        <Typography align='center' variant="h6"
+                                    component="div">
+                            {TEXT.feelsLike}
+                            {searchedCityDetails.data.current.feelslike_c}
+
+                        </Typography>
+                        <div>
+                            <div className="lowestTemperatureTitle">Daily lowest</div>
+                            <div className="lowestTemperatureNumber">{searchedCityDetails.data.cityName}</div>
+                        </div>
+                        <div>
+                            <div className="highestTemperatureTitle">Daily highest</div>
+                            <div className="highestTemperatureNumber">****</div>
+                        </div>
+                    </div>
 
                 </div>
                 <div className="searchedCityOtherDetails">
