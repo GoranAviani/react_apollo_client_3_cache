@@ -23,13 +23,11 @@ const ResultSearchedCity = ({searchedCityDetails}) => {
                 <div className="searchedCityLeftSide">
                     <div className="searchedCityMainDetails">
                         <div className="currentWeatherIcon">
-                            <Card>
-                                <CardMedia
-                                    component="img"
-                                    image={searchedCityDetails.data.current.condition.icon}
-                                    alt={searchedCityDetails.data.current.condition.text}
-                                />
-                            </Card>
+                            <CardMedia
+                                component="img"
+                                image={searchedCityDetails.data.current.condition.icon}
+                                alt={searchedCityDetails.data.current.condition.text}
+                            />
                         </div>
                         <div className="currentTemperature">
                             <Typography sx={{fontWeight: 'bold'}} align='center' gutterBottom variant="h2"
