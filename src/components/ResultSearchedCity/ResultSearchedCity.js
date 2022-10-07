@@ -57,32 +57,13 @@ const ResultSearchedCity = ({searchedCityDetails}) => {
                     </div>
 
                 </div>
-                <div className="searchedCityOtherDetails">
-                    <div className="currentTemperature">
+                <div className="searchedCityRightSide">
 
-                        <Typography align='center' gutterBottom variant="h1" component="div">
-                            {searchedCityDetails.data.current.temp_c}
-                        </Typography>
-                        <Typography align='center' gutterBottom variant="" component="div">
-                            Now
-                        </Typography>
-                        <Typography align='center' gutterBottom variant="h1" component="div">
-                            {searchedCityDetails.data.current.feelslike_c}
-                        </Typography>
-                        <Typography align='center' gutterBottom variant="" component="div">
-                            Feels like
-                        </Typography>
+                    <div className="searchedCityOtherDetails">
+                        <div className="citsearchedCityInfoName">
+                            <Typography variant="h5">{searchedCityDetails.data.location.name}</Typography>
+                        </div>
 
-
-                    </div>
-                    <div>
-                        <div className="lowestTemperatureTitle">Daily lowest</div>
-                        <div className="lowestTemperatureNumber">{searchedCityDetails.data.cityName}</div>
-                    </div>
-                    <div>
-                        <div className="highestTemperatureTitle">Daily highest</div>
-                        <div className="highestTemperatureNumber">****</div>
-                    </div>
 
                         <div>
                             <div className="weatherDescriptionTitle">Weather description</div>
