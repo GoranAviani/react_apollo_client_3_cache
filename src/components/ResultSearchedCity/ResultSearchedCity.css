@@ -3,6 +3,12 @@
     height: 100%;
 }
 
+/* this is where grid starts */
+.searchedCityLeftSide {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+}
+
 .searchedCityAllDetails {
     display: grid;
     grid-template-columns: 1fr 1fr;
