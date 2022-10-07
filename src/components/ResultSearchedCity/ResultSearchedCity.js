@@ -24,6 +24,7 @@ const ResultSearchedCity = ({searchedCityDetails}) => {
                     <div className="searchedCityMainDetails">
                         <div className="currentWeatherIcon">
                             <CardMedia
+                                sx={{objectFit: "contain"}}
                                 component="img"
                                 image={searchedCityDetails.data.current.condition.icon}
                                 alt={searchedCityDetails.data.current.condition.text}

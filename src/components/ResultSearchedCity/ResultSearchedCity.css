@@ -20,7 +20,7 @@
 }
 
 .currentWeatherIcon {
-
+    height: 20vh;
     display: flex;
     justify-self: center;
 
@@ -28,6 +28,7 @@
 
 .currentTemperature {
     display: flex;
+    align-self: center;
     justify-content: start;
 }
 
