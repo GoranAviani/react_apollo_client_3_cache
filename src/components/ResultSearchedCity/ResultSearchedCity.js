@@ -19,9 +19,6 @@ const ResultSearchedCity = ({searchedCityDetails}) => {
     console.log(searchedCityDetails.data)
     return (
         <div className="resultSearchedCity">
-            <div className="citsearchedCityInfoName">
-                <Typography variant="h5">{searchedCityDetails.data.location.name}</Typography>
-            </div>
             <div className="searchedCityAllDetails">
                 <div className="searchedCityMainDetails">
                     <div>
