@@ -18,8 +18,21 @@
     height: 150px;
 }
 
+.currentTemperature {
+    display: flex;
+    align-items: start;
+}
+
 @media screen and (max-width: 600px) {
-    .navigation {
-        height: 8vh;
+
+    .searchedCityAllDetails {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .currentWeatherIcon {
+        height: 12vh;
+        width: 12vh;
+
     }
 }
