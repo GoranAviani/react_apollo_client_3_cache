@@ -20,20 +20,18 @@ const ResultSearchedCity = ({searchedCityDetails}) => {
     return (
         <div className="resultSearchedCity">
             <div className="searchedCityAllDetails">
-                <div className="searchedCityMainDetails">
-                    <div>
-                        <Card>
-                            <CardMedia className="currentWeatherIcon"
-                                       component="img"
-                                       image={searchedCityDetails.data.current.condition.icon}
-                                       alt={searchedCityDetails.data.current.condition.text}
-                            />
-                            <CardContent>
-                                <Typography align='center' gutterBottom variant="h6" component="div">
-                                    {searchedCityDetails.data.current.condition.text}
-                                </Typography>
-                            </CardContent>
-                        </Card>
+                <div className="searchedCityLeftSide">
+                    <div className="searchedCityMainDetails">
+                        <div className="currentWeatherIcon">
+                            <Card>
+                                <CardMedia
+                                    component="img"
+                                    image={searchedCityDetails.data.current.condition.icon}
+                                    alt={searchedCityDetails.data.current.condition.text}
+                                />
+                            </Card>
+                        </div>
+                        <div className="currentTemperature">
 
                     </div>
 
@@ -65,11 +63,13 @@ const ResultSearchedCity = ({searchedCityDetails}) => {
                         <div className="highestTemperatureNumber">****</div>
                     </div>
 
-                    <div>
-                        <div className="weatherDescriptionTitle">Weather description</div>
-                        <div className="weatherDescriptionText">{searchedCityDetails.weatherNow}</div>
+                        <div>
+                            <div className="weatherDescriptionTitle">Weather description</div>
+                            <div className="weatherDescriptionText">{searchedCityDetails.weatherNow}</div>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
     )
