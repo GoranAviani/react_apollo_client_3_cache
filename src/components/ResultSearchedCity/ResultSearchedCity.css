@@ -33,6 +33,12 @@
     align-self: center;
 }
 
+.temperatureChoice {
+    display: flex;
+    justify-self: start;
+    align-self: start;
+}
+
 @media screen and (max-width: 600px) {
 
     .searchedCityAllDetails {

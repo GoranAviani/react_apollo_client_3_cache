@@ -38,11 +38,12 @@ const ResultSearchedCity = ({searchedCityDetails}) => {
                                         component="div">
                                 {searchedCityDetails.data.current.temp_c}
                             </Typography>
-                            <ButtonGroup variant="text" aria-label="text button group">
-                                <Button>°C</Button>
-                                <Button>°F</Button>
-                            </ButtonGroup>
-
+                            <div className="temperatureChoice">
+                                <ButtonGroup variant="text" aria-label="text button group">
+                                    <Button>°C</Button>
+                                    <Button>°F</Button>
+                                </ButtonGroup>
+                            </div>
                         </div>
                     </div>
                     <div className="currentOtherNumerals">
