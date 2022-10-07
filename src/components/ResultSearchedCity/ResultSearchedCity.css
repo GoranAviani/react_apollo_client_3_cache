@@ -21,11 +21,12 @@
 
 .currentWeatherIcon {
     width: 60%;
+    alignment: right;
 }
 
 .currentTemperature {
     display: flex;
-    align-items: start;
+    justify-content: end;
 }
 
 @media screen and (max-width: 600px) {

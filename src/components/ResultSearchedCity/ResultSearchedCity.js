@@ -32,7 +32,6 @@ const ResultSearchedCity = ({searchedCityDetails}) => {
                             </Card>
                         </div>
                         <div className="currentTemperature">
-
                             <Typography sx={{fontWeight: 'bold'}} align='center' gutterBottom variant="h2"
                                         component="div">
                                 {searchedCityDetails.data.current.temp_c}
