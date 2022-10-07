@@ -20,7 +20,7 @@
 }
 
 .currentWeatherIcon {
-    height: 150px;
+    width: 80%;
 }
 
 .currentTemperature {
