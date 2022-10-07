@@ -5,7 +5,8 @@ import CardContent from '@mui/material/CardContent';
 import Box from '@mui/material/Box';
 import Switch, {SwitchProps} from '@mui/material/Switch';
 import Stack from '@mui/material/Stack';
-
+import Button from '@mui/material/Button';
+import ButtonGroup from '@mui/material/ButtonGroup';
 import Typography from '@mui/material/Typography';
 
 import './ResultSearchedCity.css'
@@ -37,11 +38,11 @@ const ResultSearchedCity = ({searchedCityDetails}) => {
                                         component="div">
                                 {searchedCityDetails.data.current.temp_c}
                             </Typography>
-                            <Stack direction="row" spacing={1}>
-                                <Typography sx={{fontWeight: 'bold'}}>°C</Typography>
-                                <Switch/>
-                                <Typography sx={{fontWeight: 'bold'}}>°F</Typography>
-                            </Stack>
+                            <ButtonGroup variant="text" aria-label="text button group">
+                                <Button>°C</Button>
+                                <Button>°F</Button>
+                            </ButtonGroup>
+
                         </div>
                     </div>
                     <div className="currentOtherNumerals">
