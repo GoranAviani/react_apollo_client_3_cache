@@ -22,14 +22,16 @@
 .currentWeatherIcon {
     height: 20vh;
     display: flex;
-    justify-self: center;
+    justify-self: end;
+    align-self: center;
+
 
 }
 
 .currentTemperature {
     display: flex;
+    justify-self: start;
     align-self: center;
-    justify-content: start;
 }
 
 @media screen and (max-width: 600px) {
