@@ -2,10 +2,15 @@ import React from "react";
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
+import Box from '@mui/material/Box';
 
 import Typography from '@mui/material/Typography';
 
 import './ResultSearchedCity.css'
+
+const TEXT = {
+    feelsLike: "Feels like: "
+}
 
 const ResultSearchedCity = ({searchedCityDetails}) => {
     console.log({searchedCityDetails})
