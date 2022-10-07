@@ -20,10 +20,9 @@
 }
 
 .currentWeatherIcon {
-    height: 20vh;
+    width: 140px;
     display: flex;
     justify-self: end;
-    align-self: center;
 
 
 }
