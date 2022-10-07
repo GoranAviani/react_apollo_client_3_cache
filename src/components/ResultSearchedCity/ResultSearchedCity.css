@@ -3,17 +3,57 @@
     height: 100%;
 }
 
+/* this is where grid starts */
+.searchedCityLeftSide {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+}
+
 .searchedCityAllDetails {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+.searchedCityMainDetails {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .currentWeatherIcon {
-    height: 150px;
+    width: 140px;
+    display: flex;
+    justify-self: end;
+
+
+}
+
+.currentTemperature {
+    display: flex;
+    justify-self: start;
+    align-self: center;
+}
+
+.temperatureChoice {
+    display: flex;
+    justify-self: start;
+    align-self: start;
 }
 
 @media screen and (max-width: 600px) {
-    .navigation {
-        height: 8vh;
+
+    .searchedCityAllDetails {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .currentWeatherIcon {
+        height: 12vh;
+        width: 12vh;
+
+    }
+
+
+    .searchedCityMainDetails {
+        width: 100%;
     }
 }
