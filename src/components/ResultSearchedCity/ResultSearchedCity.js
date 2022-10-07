@@ -3,6 +3,8 @@ import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import Box from '@mui/material/Box';
+import Switch, {SwitchProps} from '@mui/material/Switch';
+import Stack from '@mui/material/Stack';
 
 import Typography from '@mui/material/Typography';
 
@@ -35,6 +37,11 @@ const ResultSearchedCity = ({searchedCityDetails}) => {
                                         component="div">
                                 {searchedCityDetails.data.current.temp_c}
                             </Typography>
+                            <Stack direction="row" spacing={1}>
+                                <Typography sx={{fontWeight: 'bold'}}>°C</Typography>
+                                <Switch/>
+                                <Typography sx={{fontWeight: 'bold'}}>°F</Typography>
+                            </Stack>
                         </div>
                     </div>
                     <div className="currentOtherNumerals">
