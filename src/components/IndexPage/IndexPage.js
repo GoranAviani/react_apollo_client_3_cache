@@ -34,7 +34,6 @@ const IndexPage = () => {
             query: USER_DATA, data: {
                 userDataCache: {
                     ...userData1.userDataCache,
-                    address: 'Tyresö',
                     favourite_toy: 'little red car'
                 }
             }

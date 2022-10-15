@@ -16,6 +16,9 @@ const Search = ({searchCityAPIHandler}) => {
                 userDataCache: {
                     name: 'Oliver',
                     lastname: "Aviani",
+                    email: '',
+                    address: '',
+                    favourite_toy: ''
                 }
             }
         })
