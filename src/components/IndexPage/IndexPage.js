@@ -44,7 +44,7 @@ const IndexPage = () => {
         const todo = client.readQuery({
             query: TODO_LIST,
             variables: {
-                id: 5,
+                id: 6,
             },
         });
         console.log({todo})
