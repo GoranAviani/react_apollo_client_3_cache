@@ -12,7 +12,7 @@ const Search = ({searchCityAPIHandler}) => {
     const searchFormHandler = (e) => {
         e.preventDefault()
         client.writeQuery({
-            query: USER_DATA, UserDataQuery: {
+            query: USER_DATA, data: {
                 userDataCache: {
                     name: 'Oliver',
                     lastname: "Aviani",
