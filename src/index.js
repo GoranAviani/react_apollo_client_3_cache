@@ -10,6 +10,11 @@ import IndexPage from "./components/IndexPage/IndexPage";
 import Dashboard from "./components/Dashboard/Dashboard";
 import LoginForm from "./components/LoginRegister/LoginForm";
 import RegistrationForm from "./components/LoginRegister/RegistrationForm";
+import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
+const client = new ApolloClient({
+  cache: new InMemoryCache(),
+});
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
