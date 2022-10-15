@@ -41,13 +41,21 @@ const IndexPage = () => {
 
 
         ////
-        const todo = client.readQuery({
+        const todo1 = client.readQuery({
             query: TODO_LIST,
             variables: {
-                id: 5,
+                id: 6,
             },
         });
-        console.log({todo})
+        const todo2 = client.readQuery({
+            query: TODO_LIST,
+            variables: {
+                id: 6,
+            },
+        });
+        console.log({todo1})
+        console.log({todo2})
+
         useSearchCityAPI(accessKey, setAccessKey, cityName, setSearchedCityDetails, setIsLoading)
     }
     const windowDimension = useWindowDimensions()
