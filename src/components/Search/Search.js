@@ -3,13 +3,25 @@ import React, {useState, useEffect, useRef} from "react";
 import {Button, TextField} from "@mui/material";
 
 import './Search.css'
+import {TODO_LIST} from "../../apollo/cache/queries/totoList";
+import {client} from "../../index";
 
 const Search = ({searchCityAPIHandler}) => {
     const cityInputRef = useRef();
 
     const searchFormHandler = (e) => {
         e.preventDefault()
+        client.writeQuery({
+            query: TODO_LIST, data: {
+                todo: {
+                    id: 5,
+                    text: "aaa",
+                    completed: false
+                }
+            }
+        })
         searchCityAPIHandler(cityInputRef.current.value)
+
     }
 
     return (

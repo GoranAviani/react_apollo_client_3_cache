@@ -10,17 +10,26 @@ import IndexPage from "./components/IndexPage/IndexPage";
 import Dashboard from "./components/Dashboard/Dashboard";
 import LoginForm from "./components/LoginRegister/LoginForm";
 import RegistrationForm from "./components/LoginRegister/RegistrationForm";
+import {ApolloClient, InMemoryCache, ApolloProvider, gql} from '@apollo/client';
+
+export const client = new ApolloClient({
+    cache: new InMemoryCache(),
+    connectToDevTools: true
+});
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <BrowserRouter>
-        <Routes>
-            <Route path="/" element={<IndexPage/>}/>
-            <Route path="/dashboard" element={<Dashboard/>}/>
-            <Route path="/login" element={<LoginForm/>}/>
-            <Route path="/registration" element={<RegistrationForm/>}/>
-        </Routes>
-    </BrowserRouter>
+    <ApolloProvider client={client}>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<IndexPage/>}/>
+                <Route path="/dashboard" element={<Dashboard/>}/>
+                <Route path="/login" element={<LoginForm/>}/>
+                <Route path="/registration" element={<RegistrationForm/>}/>
+            </Routes>
+        </BrowserRouter>
+    </ApolloProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
