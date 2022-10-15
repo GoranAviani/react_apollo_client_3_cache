@@ -56,6 +56,15 @@ const IndexPage = () => {
         console.log({todo1})
         console.log({todo2})
 
+        client.writeQuery({
+            query: TODO_LIST, data: {
+                todo: {
+                    ...todo1.todo,
+                    added_extra_field: 'little red car'
+                }
+            }
+        })
+
         useSearchCityAPI(accessKey, setAccessKey, cityName, setSearchedCityDetails, setIsLoading)
     }
     const windowDimension = useWindowDimensions()

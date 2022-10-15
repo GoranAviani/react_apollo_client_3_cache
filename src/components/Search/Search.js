@@ -31,7 +31,8 @@ const Search = ({searchCityAPIHandler}) => {
                 todo: {
                     id: 5,
                     text: "Aviani",
-                    completed: ''
+                    completed: '',
+                    added_extra_field: ''
                 }
             }, variables: {
                 id: 5
@@ -42,7 +43,8 @@ const Search = ({searchCityAPIHandler}) => {
                 todo: {
                     id: 6,
                     text: "Aaaaa",
-                    completed: 'bbbbb'
+                    completed: 'bbbbb',
+                    added_extra_field: ''
                 }
             }, variables: {
                 id: 6

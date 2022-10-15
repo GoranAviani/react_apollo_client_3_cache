@@ -6,6 +6,7 @@ export const TODO_LIST = gql`
         id
         text
         completed
+        added_extra_field
       }
     }
   `;
