@@ -50,7 +50,7 @@ const Search = ({searchCityAPIHandler}) => {
         client.writeQuery({
             query: TODO_LIST, data: {
                 todo: {
-                    id,
+                    id: 5,
                     text: "Aviani",
                     completed: ''
                 }
