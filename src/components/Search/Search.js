@@ -63,7 +63,7 @@ const Search = ({searchCityAPIHandler}) => {
                 todo: {
                     id: 6,
                     text: "Aaaaa",
-                    completed: ''
+                    completed: 'bbbbb'
                 }
             }, variables: {
                 id: 6
