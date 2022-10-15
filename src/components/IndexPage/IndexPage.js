@@ -13,8 +13,8 @@ import './IndexPage.css'
 import '../../css/GlobalContainer.css'
 import useWindowDimensions from "../../hooks/window/useWindowDimensions";
 import {client} from "../../index";
-import {USER_DATA} from "../../apollo/cache/queries/totoList";
-
+import {USER_DATA} from "../../apollo/cache/queries/userData";
+import {TODO_LIST} from "../../apollo/cache/queries/todo";
 
 const IndexPage = () => {
 
@@ -25,10 +25,47 @@ const IndexPage = () => {
     const searchCityAPIHandler = (cityName) => {
         /* check input here*/
         const userData1 = client.readQuery({
-            query: USER_DATA
+            query: USER_DATA,
         })
         console.log({userData1})
         console.log(`user name: ${userData1.userDataCache.name}`)
+
+        client.writeQuery({
+            query: USER_DATA, data: {
+                userDataCache: {
+                    ...userData1.userDataCache,
+                    favourite_toy: 'little red car'
+                }
+            }
+        })
+
+
+        ////
+        const todo1 = client.readQuery({
+            query: TODO_LIST,
+            variables: {
+                id: 6,
+            },
+        });
+        const todo2 = client.readQuery({
+            query: TODO_LIST,
+            variables: {
+                id: 5,
+            },
+        });
+        console.log({todo1})
+        console.log({todo2})
+
+        client.writeQuery({
+            query: TODO_LIST, data: {
+                todo: {
+                    ...todo1.todo,
+                    added_extra_field: 'little red car'
+                }
+            }, variables: {
+                id: 6
+            }
+        })
 
         useSearchCityAPI(accessKey, setAccessKey, cityName, setSearchedCityDetails, setIsLoading)
     }

@@ -3,8 +3,9 @@ import React, {useState, useEffect, useRef} from "react";
 import {Button, TextField} from "@mui/material";
 
 import './Search.css'
-import {USER_DATA} from "../../apollo/cache/queries/totoList";
+import {USER_DATA} from "../../apollo/cache/queries/userData";
 import {client} from "../../index";
+import {TODO_LIST} from "../../apollo/cache/queries/todo";
 
 const Search = ({searchCityAPIHandler}) => {
     const cityInputRef = useRef();
@@ -17,8 +18,36 @@ const Search = ({searchCityAPIHandler}) => {
                     name: 'Oliver',
                     lastname: "Aviani",
                     email: '',
-                    address: ''
+                    address: '',
+                    favourite_toy: ''
                 }
+            }
+        })
+
+        ///
+
+        client.writeQuery({
+            query: TODO_LIST, data: {
+                todo: {
+                    id: 5,
+                    text: "Aviani",
+                    completed: '',
+                    added_extra_field: ''
+                }
+            }, variables: {
+                id: 5
+            }
+        })
+        client.writeQuery({
+            query: TODO_LIST, data: {
+                todo: {
+                    id: 6,
+                    text: "Aaaaa",
+                    completed: 'bbbbb',
+                    added_extra_field: ''
+                }
+            }, variables: {
+                id: 6
             }
         })
         searchCityAPIHandler(cityInputRef.current.value)
