@@ -7,6 +7,7 @@ export const USER_DATA = gql`
       lastname
       email
       address
+      favourite_toy
     }
   }
 `;
