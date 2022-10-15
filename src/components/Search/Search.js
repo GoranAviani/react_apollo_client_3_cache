@@ -58,7 +58,17 @@ const Search = ({searchCityAPIHandler}) => {
                 id: 5
             }
         })
-
+        client.writeQuery({
+            query: TODO_LIST, data: {
+                todo: {
+                    id: 6,
+                    text: "Aaaaa",
+                    completed: ''
+                }
+            }, variables: {
+                id: 6
+            }
+        })
         searchCityAPIHandler(cityInputRef.current.value)
 
     }
