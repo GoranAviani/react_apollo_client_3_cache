@@ -62,6 +62,8 @@ const IndexPage = () => {
                     ...todo1.todo,
                     added_extra_field: 'little red car'
                 }
+            }, variables: {
+                id: 6
             }
         })
 
