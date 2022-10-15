@@ -24,10 +24,10 @@ const IndexPage = () => {
 
     const searchCityAPIHandler = (cityName) => {
         /* check input here*/
-        const {userData} = client.readQuery({
+        const userData1 = client.readQuery({
             query: USER_DATA
         })
-        console.log({userData})
+        console.log({userData1})
         useSearchCityAPI(accessKey, setAccessKey, cityName, setSearchedCityDetails, setIsLoading)
     }
     const windowDimension = useWindowDimensions()
