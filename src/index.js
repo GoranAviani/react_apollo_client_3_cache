@@ -18,6 +18,8 @@ const client = new ApolloClient({
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+      <ApolloProvider client={client}>
+
     <BrowserRouter>
         <Routes>
             <Route path="/" element={<IndexPage/>}/>
@@ -26,6 +28,8 @@ root.render(
             <Route path="/registration" element={<RegistrationForm/>}/>
         </Routes>
     </BrowserRouter>
+            </ApolloProvider>
+
 );
 
 // If you want to start measuring performance in your app, pass a function
