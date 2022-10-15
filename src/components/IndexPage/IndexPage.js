@@ -12,6 +12,8 @@ import {useSearchCityAPI} from "../../hooks/api/useSearchCityAPI";
 import './IndexPage.css'
 import '../../css/GlobalContainer.css'
 import useWindowDimensions from "../../hooks/window/useWindowDimensions";
+import {client} from "../../index";
+import {USER_DATA} from "../../apollo/cache/queries/totoList";
 
 
 const IndexPage = () => {
@@ -22,8 +24,10 @@ const IndexPage = () => {
 
     const searchCityAPIHandler = (cityName) => {
         /* check input here*/
-
-
+        const {userData} = client.readQuery({
+            query: USER_DATA
+        })
+        console.log({userData})
         useSearchCityAPI(accessKey, setAccessKey, cityName, setSearchedCityDetails, setIsLoading)
     }
     const windowDimension = useWindowDimensions()
