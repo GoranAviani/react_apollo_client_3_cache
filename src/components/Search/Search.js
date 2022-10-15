@@ -23,6 +23,7 @@ const Search = ({searchCityAPIHandler}) => {
             }
         })
         // write list of objects to apollo cache
+        /*
         client.writeQuery({
             query: USER_DATA, data: {
                 userDataCache: [{
@@ -40,6 +41,8 @@ const Search = ({searchCityAPIHandler}) => {
                 }]
             }
         })
+
+         */
         searchCityAPIHandler(cityInputRef.current.value)
 
     }
