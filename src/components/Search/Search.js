@@ -13,7 +13,7 @@ const Search = ({searchCityAPIHandler}) => {
         e.preventDefault()
         client.writeQuery({
             query: TODO_LIST, data: {
-                data: {
+                userData: {
                     name: 'Oliver',
                     lastname: "Aviani",
                     email: '',
