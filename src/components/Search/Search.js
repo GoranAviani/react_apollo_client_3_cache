@@ -14,9 +14,10 @@ const Search = ({searchCityAPIHandler}) => {
         client.writeQuery({
             query: TODO_LIST, data: {
                 data: {
-                    id: 5,
-                    text: "aaa",
-                    completed: false
+                    name: 'Oliver',
+                    lastname: "Aviani",
+                    email: '',
+                    address: ''
                 }
             }
         })
