@@ -28,8 +28,8 @@ const IndexPage = () => {
             query: USER_DATA,
         })
         console.log({userData1})
-        console.log(`user name: ${userData1.userDataCache.name}`)
-        /*
+        // console.log(`user name: ${userData1.userDataCache.name}`)
+
         client.writeQuery({
             query: USER_DATA, data: {
                 userDataCache: {
@@ -39,7 +39,7 @@ const IndexPage = () => {
                 }
             }
         })
-*/
+
         useSearchCityAPI(accessKey, setAccessKey, cityName, setSearchedCityDetails, setIsLoading)
     }
     const windowDimension = useWindowDimensions()
