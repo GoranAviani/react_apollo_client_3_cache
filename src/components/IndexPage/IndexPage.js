@@ -28,7 +28,7 @@ const IndexPage = () => {
             query: USER_DATA,
         })
         console.log({userData1})
-        // console.log(`user name: ${userData1.userDataCache.name}`)
+        console.log(`user name: ${userData1.userDataCache.name}`)
 
 
         useSearchCityAPI(accessKey, setAccessKey, cityName, setSearchedCityDetails, setIsLoading)
