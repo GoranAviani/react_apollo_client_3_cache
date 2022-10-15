@@ -31,7 +31,10 @@ const IndexPage = () => {
         console.log(`user name: ${userData1.userDataCache.name}`)
         client.writeQuery({
             query: USER_DATA, data: {
-                name: 'Oliver_Oli'
+                userDataCache: {
+                    name: 'Oliver_Oli'
+
+                }
             }
         })
 
