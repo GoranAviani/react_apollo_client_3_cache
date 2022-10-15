@@ -13,9 +13,11 @@ const Search = ({searchCityAPIHandler}) => {
         e.preventDefault()
         client.writeQuery({
             query: TODO_LIST, data: {
-                id: 5,
-                text: "aaa",
-                completed: false
+                todo: {
+                    id: 5,
+                    text: "aaa",
+                    completed: false
+                }
             }
         })
         searchCityAPIHandler(cityInputRef.current.value)
