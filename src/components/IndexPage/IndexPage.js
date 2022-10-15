@@ -33,7 +33,6 @@ const IndexPage = () => {
             query: USER_DATA, data: {
                 userDataCache: {
                     name: 'Oliver_Oli'
-
                 }
             }
         })
