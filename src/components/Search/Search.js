@@ -22,15 +22,22 @@ const Search = ({searchCityAPIHandler}) => {
                 }
             }
         })
+        // write list of objects to apollo cache
         client.writeQuery({
             query: USER_DATA, data: {
-                userDataCache: {
-                    id: 'userData11',
+                userDataCache: [{
+                    id: '111',
                     name: '1111',
                     lastname: "2222",
                     email: '',
                     address: ''
-                }
+                }, {
+                    id: '222',
+                    name: '1111',
+                    lastname: "2222",
+                    email: '',
+                    address: ''
+                }]
             }
         })
         searchCityAPIHandler(cityInputRef.current.value)
