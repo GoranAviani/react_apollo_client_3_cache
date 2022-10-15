@@ -12,7 +12,7 @@ import LoginForm from "./components/LoginRegister/LoginForm";
 import RegistrationForm from "./components/LoginRegister/RegistrationForm";
 import {ApolloClient, InMemoryCache, ApolloProvider, gql} from '@apollo/client';
 
-const client = new ApolloClient({
+export const client = new ApolloClient({
     cache: new InMemoryCache(),
     connectToDevTools: true
 });
