@@ -13,7 +13,7 @@ import './IndexPage.css'
 import '../../css/GlobalContainer.css'
 import useWindowDimensions from "../../hooks/window/useWindowDimensions";
 import {client} from "../../index";
-import {USER_DATA} from "../../apollo/cache/queries/totoList";
+import {USER_DATA} from "../../apollo/cache/queries/userData";
 
 
 const IndexPage = () => {

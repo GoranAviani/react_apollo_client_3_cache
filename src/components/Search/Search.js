@@ -3,7 +3,7 @@ import React, {useState, useEffect, useRef} from "react";
 import {Button, TextField} from "@mui/material";
 
 import './Search.css'
-import {USER_DATA} from "../../apollo/cache/queries/totoList";
+import {USER_DATA} from "../../apollo/cache/queries/userData";
 import {client} from "../../index";
 
 const Search = ({searchCityAPIHandler}) => {
