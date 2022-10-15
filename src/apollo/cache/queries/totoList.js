@@ -1,11 +1,12 @@
 import {gql} from '@apollo/client';
 
-export const TODO_LIST = gql`
-  query TodoList($id: ID!) {
-    todo(id: $id) {
-      id
-      text
-      completed
+export const USER_DATA = gql`
+  query UserDataQuery($id: ID!) {
+    userDataCache(id: $id) {
+      name
+      lastname
+      email
+      address
     }
   }
 `;
