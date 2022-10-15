@@ -14,7 +14,7 @@ import '../../css/GlobalContainer.css'
 import useWindowDimensions from "../../hooks/window/useWindowDimensions";
 import {client} from "../../index";
 import {USER_DATA} from "../../apollo/cache/queries/userData";
-
+import {TODO_LIST} from "../../apollo/cache/queries/todo";
 
 const IndexPage = () => {
 
@@ -39,6 +39,15 @@ const IndexPage = () => {
             }
         })
 
+
+        ////
+        const todo = client.readQuery({
+            query: TODO_LIST,
+            variables: {
+                id: 5,
+            },
+        });
+        console.log({todo})
         useSearchCityAPI(accessKey, setAccessKey, cityName, setSearchedCityDetails, setIsLoading)
     }
     const windowDimension = useWindowDimensions()

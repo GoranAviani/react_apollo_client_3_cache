@@ -5,6 +5,7 @@ import {Button, TextField} from "@mui/material";
 import './Search.css'
 import {USER_DATA} from "../../apollo/cache/queries/userData";
 import {client} from "../../index";
+import {TODO_LIST} from "../../apollo/cache/queries/todo";
 
 const Search = ({searchCityAPIHandler}) => {
     const cityInputRef = useRef();
@@ -43,6 +44,19 @@ const Search = ({searchCityAPIHandler}) => {
         })
 
          */
+
+        ///
+
+        client.writeQuery({
+            query: TODO_LIST, data: {
+                todo: {
+                    id: 6,
+                    text: "Aviani",
+                    completed: ''
+                }
+            }
+        })
+
         searchCityAPIHandler(cityInputRef.current.value)
 
     }
