@@ -21,7 +21,9 @@ const IndexPage = () => {
     const [accessKey, setAccessKey] = useState()
 
     const searchCityAPIHandler = (cityName) => {
-        /* check input */
+        /* check input here*/
+
+
         useSearchCityAPI(accessKey, setAccessKey, cityName, setSearchedCityDetails, setIsLoading)
     }
     const windowDimension = useWindowDimensions()
