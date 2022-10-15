@@ -1,5 +1,5 @@
 {
-  "name": "react_weather",
+  "name": "ls",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -39,5 +39,17 @@
   "devDependencies": {
     "eslint": "^5.12.0",
     "eslint-plugin-react-hooks": "^4.6.0"
-  }
+  },
+  "description": "# React weather stack: react, axios, react-dom, material ui",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GoranAviani/react_weather.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GoranAviani/react_weather/issues"
+  },
+  "homepage": "https://github.com/GoranAviani/react_weather#readme"
 }
