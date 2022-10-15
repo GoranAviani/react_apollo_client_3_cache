@@ -22,6 +22,17 @@ const Search = ({searchCityAPIHandler}) => {
                 }
             }
         })
+        client.writeQuery({
+            query: USER_DATA, data: {
+                userDataCache: {
+                    id: 'userData11',
+                    name: '1111',
+                    lastname: "2222",
+                    email: '',
+                    address: ''
+                }
+            }
+        })
         searchCityAPIHandler(cityInputRef.current.value)
 
     }
