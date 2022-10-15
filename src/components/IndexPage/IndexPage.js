@@ -25,11 +25,14 @@ const IndexPage = () => {
     const searchCityAPIHandler = (cityName) => {
         /* check input here*/
         const userData1 = client.readQuery({
-            query: USER_DATA
+            query: USER_DATA,
+            variables: {
+                id: 'userData'
+            }
         })
         console.log({userData1})
-        console.log(`user name: ${userData1.userDataCache.name}`)
-
+        // console.log(`user name: ${userData1.userDataCache.name}`)
+        /*
         client.writeQuery({
             query: USER_DATA, data: {
                 userDataCache: {
@@ -38,7 +41,7 @@ const IndexPage = () => {
                 }
             }
         })
-
+*/
         useSearchCityAPI(accessKey, setAccessKey, cityName, setSearchedCityDetails, setIsLoading)
     }
     const windowDimension = useWindowDimensions()
