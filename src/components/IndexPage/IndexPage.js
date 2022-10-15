@@ -36,6 +36,7 @@ const IndexPage = () => {
         client.writeQuery({
             query: USER_DATA, data: {
                 userDataCache: {
+                    id: 'userData',
                     address: 'Tyresö'
                 },
                 variables: {
